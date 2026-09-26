@@ -1,14 +1,26 @@
-# red-libero · Scene Studio
+<h1 align="center">red-libero · Scene Studio</h1>
 
-**An interactive environment for building physical risk scenarios and evaluating vision-language-action policies.**
+<p align="center">
+  <strong>An interactive environment for building physical risk scenarios and evaluating vision-language-action policies.</strong>
+</p>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Python 3.10](https://img.shields.io/badge/Python-3.10-3776AB.svg)](environment.yml)
-[![GUI: Tkinter / ttk](https://img.shields.io/badge/GUI-Tkinter%20%2F%20ttk-0E766E.svg)](docs/GUI_ARCHITECTURE.md)
-[![Platform: Linux](https://img.shields.io/badge/Platform-Linux-333333.svg)](#installation)
-[![Website](https://img.shields.io/badge/Website-redvla.github.io-1677c8.svg)](https://redvla.github.io)
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
+  <a href="environment.yml"><img src="https://img.shields.io/badge/Python-3.10-3776AB.svg" alt="Python 3.10"></a>
+  <a href="docs/GUI_ARCHITECTURE.md"><img src="https://img.shields.io/badge/GUI-Tkinter%20%2F%20ttk-0E766E.svg" alt="GUI: Tkinter / ttk"></a>
+  <a href="#installation"><img src="https://img.shields.io/badge/Platform-Linux-333333.svg" alt="Platform: Linux"></a>
+  <a href="https://redvla.github.io"><img src="https://img.shields.io/badge/Website-redvla.github.io-1677c8.svg" alt="Website"></a>
+</p>
 
-**[Project website](https://redvla.github.io) · [Paper](https://arxiv.org/abs/2604.22591) · [Documentation](docs/index.md) · [中文文档](docs/index.zh.md) · [VLA integration](docs/POLICY_SERVICES.md) · [Citation](#citation) · [License](#license)**
+<p align="center">
+  <a href="https://redvla.github.io">Project website</a> ·
+  <a href="https://arxiv.org/abs/2604.22591">Paper</a> ·
+  <a href="docs/index.md">Documentation</a> ·
+  <a href="docs/index.zh.md">中文文档</a> ·
+  <a href="docs/POLICY_SERVICES.md">VLA integration</a> ·
+  <a href="#citation">Citation</a> ·
+  <a href="#license">License</a>
+</p>
 
 **red-libero** is the scene editing and simulation workspace for **RedVLA**. It provides a desktop editor, physical risk objects and safety predicates, scene snapshots, and service-based VLA execution. Build a scene, connect a policy running in its own environment, and inspect its actions, task outcome, and safety events in one place.
 
