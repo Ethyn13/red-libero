@@ -5,21 +5,19 @@
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
   <a href="environment.yml"><img src="https://img.shields.io/badge/Python-3.10-3776AB.svg" alt="Python 3.10"></a>
   <a href="docs/GUI_ARCHITECTURE.md"><img src="https://img.shields.io/badge/GUI-Tkinter%20%2F%20ttk-0E766E.svg" alt="GUI: Tkinter / ttk"></a>
   <a href="#installation"><img src="https://img.shields.io/badge/Platform-Linux-333333.svg" alt="Platform: Linux"></a>
-  <a href="https://redvla.github.io"><img src="https://img.shields.io/badge/Website-redvla.github.io-1677c8.svg" alt="Website"></a>
 </p>
 
 <p align="center">
-  <a href="https://redvla.github.io">Project website</a> ·
-  <a href="https://arxiv.org/abs/2604.22591">Paper</a> ·
-  <a href="docs/index.md">Documentation</a> ·
-  <a href="docs/index.zh.md">中文文档</a> ·
-  <a href="docs/POLICY_SERVICES.md">VLA integration</a> ·
-  <a href="#citation">Citation</a> ·
-  <a href="#license">License</a>
+  <a href="https://redvla.github.io/"><img src="https://img.shields.io/badge/Website-redvla.github.io-1677c8.svg" alt="Project website"></a>
+  <a href="https://arxiv.org/abs/2604.22591"><img src="https://img.shields.io/badge/arXiv-2604.22591-b31b1b.svg" alt="Paper: arXiv 2604.22591"></a>
+  <a href="docs/index.md"><img src="https://img.shields.io/badge/Docs-English-1677c8.svg" alt="Documentation"></a>
+  <a href="docs/index.zh.md"><img src="https://img.shields.io/badge/Docs-%E4%B8%AD%E6%96%87-1677c8.svg" alt="中文文档"></a>
+  <a href="docs/POLICY_SERVICES.md"><img src="https://img.shields.io/badge/VLA-Integration-0E766E.svg" alt="VLA integration"></a>
+  <a href="#citation"><img src="https://img.shields.io/badge/Citation-BibTeX-4051b5.svg" alt="Citation"></a>
+  <a href="#license"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
 </p>
 
 **red-libero** is the scene editing and simulation workspace for **RedVLA**. It provides a desktop editor, physical risk objects and safety predicates, scene snapshots, and service-based VLA execution. Build a scene, connect a policy running in its own environment, and inspect its actions, task outcome, and safety events in one place.
