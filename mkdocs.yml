@@ -1,0 +1,136 @@
+site_name: red-libero
+site_description: Scene editing, physical risk scenarios, and VLA evaluation.
+site_url: !ENV [DOCS_SITE_URL, "http://127.0.0.1:8765/"]
+repo_url: https://github.com/Ethyn13/red-libero
+repo_name: Source
+edit_uri: ""
+docs_dir: docs
+site_dir: site
+dev_addr: 127.0.0.1:8765
+strict: true
+copyright: red-libero · MIT license · Upstream notices retained
+
+theme:
+  name: material
+  language: en
+  font: false
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: custom
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search:
+      lang: [en, zh]
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          name: English
+          default: true
+          build: true
+        - locale: zh
+          name: 简体中文
+          build: true
+          site_description: 场景编辑、物理风险场景构建与 VLA 策略测试。
+          nav_translations:
+            Documentation: 文档目录
+            Guide overview: 完整文档概览
+            Getting started: 快速开始
+            Installation: 环境安装
+            First scene: 第一个场景
+            Scene Studio: 场景工作台
+            GUI guide: GUI 使用指南
+            Scene construction: 场景构建指南
+            Recording & exports: 录制与导出
+            Remote access: 远程访问
+            Safety: 安全检测
+            Rule tree & semantics: 规则树与检测语义
+            Predicate catalog: 谓词目录
+            VLA integration: VLA 接入
+            Connections & profiles: 连接与配置
+            Model recipes: 模型启动示例
+            Development: 开发维护
+            Architecture: 项目架构
+            Contributing: 贡献指南
+            Documentation site: 文档站维护
+            Troubleshooting: 常见问题
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+hooks:
+  - docs/hooks.py
+exclude_docs: |
+  hooks.py
+
+extra_css:
+  - assets/styles.css
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://redvla.github.io
+      name: RedVLA project website
+    - icon: fontawesome/brands/github
+      link: https://github.com/Ethyn13/red-libero
+      name: Source repository
+
+nav:
+  - Documentation:
+      - Guide overview: index.md
+  - Getting started:
+      - Installation: installation.md
+      - First scene: quickstart.md
+  - Scene Studio:
+      - GUI guide: GUI.md
+      - Scene construction: scenarios.md
+      - Recording & exports: recording.md
+      - Remote access: remote.md
+  - Safety:
+      - Rule tree & semantics: SAFETY_RULES.md
+      - Predicate catalog: predicates.md
+  - VLA integration:
+      - Connections & profiles: POLICY_SERVICES.md
+      - Model recipes: models.md
+  - Development:
+      - Architecture: GUI_ARCHITECTURE.md
+      - Contributing: contributing.md
+      - Documentation site: documentation.md
+  - Troubleshooting: troubleshooting.md

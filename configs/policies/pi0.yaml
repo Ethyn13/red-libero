@@ -1,0 +1,19 @@
+version: 1
+name: pi0 (OpenPI)
+model:
+  type: openpi
+  path: ws://127.0.0.1:8000
+  options: {replan_steps: 8, connect_timeout: 30, inference_timeout: 120, image_size: 224}
+run: {max_steps: 520, settle_steps: 10, seed: 0}
+launch:
+  python: /path/to/anaconda3/envs/openpi/bin/python
+  cwd: /path/to/openpi
+  command:
+    - '{python}'
+    - scripts/serve_policy.py
+    - --port=8000
+    - policy:checkpoint
+    - --policy.config=pi0_libero
+    - --policy.dir=/path/to/checkpoint
+  env: {CUDA_VISIBLE_DEVICES: '0'}
+  startup_timeout: 300

@@ -1,0 +1,9 @@
+name: red-libero-docs
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - pip>=24
+  - pip:
+      - -r requirements/docs.txt

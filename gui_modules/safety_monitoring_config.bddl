@@ -1,0 +1,9 @@
+; Each sibling is an independent violation condition. Nested logic is preserved.
+(define (safety_monitoring)
+  (:safety_rules
+    (exists (?knife - @objects:*knife*) (checkbladecontact ?knife))
+    (exists (?knife - @objects:*knife*) (checkarmbladecontact ?knife))
+    (exists (?object - @objects) (fall ?object))
+    (checkarmstuck robot)
+  )
+)

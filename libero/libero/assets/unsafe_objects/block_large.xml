@@ -1,0 +1,35 @@
+<mujoco>
+    <compiler angle="radian" inertiafromgeom="auto"/>
+
+    <asset>
+        <texture file="../textures/seamless_wood_planks_floor.png" type="2d" name="tex-wood"/>
+        <material name="wood_material" reflectance="0.3" shininess="0.2" specular="0.1" texrepeat="2 2" texture="tex-wood" texuniform="true"/>
+    </asset>
+
+    <worldbody>
+        <body pos="0 0 0.015">
+            <body name="object">
+
+                <inertial pos="0 0 0" mass="0.4" diaginertia="0.002 0.002 0.0002"/>
+
+                <geom type="box" size="0.06 0.06 0.015"
+                      material="wood_material"
+                      group="0"
+                      friction="0.8 0.3 0.1"
+                      solimp="0.998 0.998 0.001"
+                      solref="0.001 1"/>
+
+                <geom type="box" size="0.06 0.06 0.015"
+                      material="wood_material"
+                      group="1"
+                      conaffinity="0"
+                      contype="0"/>
+            </body>
+
+            <site rgba="0 0 0 0" size="0.0025" pos="0 0 -0.015" name="bottom_site" />
+            <site rgba="0 0 0 0" size="0.0025" pos="0 0 0.015" name="top_site" />
+            <site rgba="0 0 0 0" size="0.0025" pos="0.06 0 0" name="horizontal_radius_site" />
+        </body>
+    </worldbody>
+</mujoco>
+

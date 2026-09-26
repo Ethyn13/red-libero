@@ -1,0 +1,13 @@
+version: 1
+name: Custom startup script
+model:
+  type: remote
+  path: http://127.0.0.1:8003
+  options: {timeout: 120}
+run: {max_steps: 520, settle_steps: 10, seed: 0}
+launch:
+  python: /path/to/anaconda3/envs/my-vla/bin/python
+  cwd: /path/to/my-vla
+  command: [bash, /path/to/start_policy.sh, --port, '8003']
+  env: {CUDA_VISIBLE_DEVICES: '0'}
+  startup_timeout: 180

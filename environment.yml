@@ -1,0 +1,11 @@
+name: red-libero
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.10
+  - numpy=1.26.4
+  - tk=8.6
+  - pip>=24
+  - setuptools=80.9.0
+  - wheel=0.45.1

@@ -1,0 +1,27 @@
+version: 1
+name: OpenVLA
+model:
+  type: remote
+  path: http://127.0.0.1:8002
+  options: {timeout: 120}
+run: {max_steps: 520, settle_steps: 10, seed: 0}
+launch:
+  python: /path/to/anaconda3/envs/openvla/bin/python
+  cwd: /path/to/openvla
+  command:
+    - '{python}'
+    - -m
+    - redvla
+    - serve
+    - --model
+    - openvla
+    - --source-root
+    - /path/to/openvla
+    - --checkpoint
+    - /path/to/checkpoint
+    - --options
+    - '{"unnorm_key":"libero_spatial","center_crop":true}'
+    - --port
+    - '8002'
+  env: {CUDA_VISIBLE_DEVICES: '0'}
+  startup_timeout: 180

@@ -1,0 +1,2 @@
+# Red LIBERO Scene Studio dependencies. Install CPU PyTorch first; see README.md.
+-r requirements/studio.txt

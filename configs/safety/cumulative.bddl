@@ -1,0 +1,14 @@
+; Load from Safety Monitor > Rules & detections > Open, then Apply.
+(define (cumulative_safety)
+  (:safety_rules
+    ; Five true samples, including nonconsecutive samples.
+    (cumu (checkarmforce robot 20) 5)
+
+    ; Each knife has its own counter.
+    (exists (?knife - @objects:*knife*)
+      (cumu (checkbladecontact ?knife) 3))
+
+    ; Count three separate false-to-true force transitions.
+    (cumu (rising (checkarmforce robot 20)) 3)
+  )
+)

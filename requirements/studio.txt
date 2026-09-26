@@ -1,0 +1,23 @@
+# Scene Studio runtime. Install CPU PyTorch first as described in README.md.
+# Model-serving frameworks belong in separate Conda environments.
+numpy==1.26.4
+robosuite==1.5.1
+mujoco==3.3.7
+torch==2.5.1
+bddl==1.0.1
+gym==0.25.2
+scipy==1.13.1
+numba==0.67.0
+mink==1.1.0
+PyOpenGL==3.1.10
+opencv-python==4.10.0.84
+Pillow==10.4.0
+matplotlib==3.10.9
+h5py==3.16.0
+imageio==2.37.4
+imageio-ffmpeg==0.6.0
+PyYAML==6.0.2
+easydict==1.13
+cloudpickle==3.1.2
+future==1.0.0
+shapely==2.1.2

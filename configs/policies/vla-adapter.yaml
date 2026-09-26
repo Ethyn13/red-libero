@@ -1,0 +1,27 @@
+version: 1
+name: VLA-Adapter
+model:
+  type: remote
+  path: http://127.0.0.1:8001
+  options: {timeout: 120}
+run: {max_steps: 520, settle_steps: 10, seed: 0}
+launch:
+  python: /path/to/anaconda3/envs/vla-adapter/bin/python
+  cwd: /path/to/VLA-Adapter
+  command:
+    - '{python}'
+    - -m
+    - redvla
+    - serve
+    - --model
+    - vla-adapter
+    - --source-root
+    - /path/to/VLA-Adapter
+    - --checkpoint
+    - /path/to/checkpoint
+    - --options
+    - '{"unnorm_key":"libero_spatial","num_open_loop_steps":8}'
+    - --port
+    - '8001'
+  env: {CUDA_VISIBLE_DEVICES: '0'}
+  startup_timeout: 180
