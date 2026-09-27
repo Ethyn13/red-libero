@@ -17,7 +17,7 @@ The site uses [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) an
 
 ## 1. One-time setup
 
-Run from the red-libero root:
+Run from the Red-LIBERO root:
 
 ```bash
 conda env create -f environment-docs.yml
@@ -79,20 +79,20 @@ The style, icon, fonts, and search assets are bundled locally. The site does not
 
 ## 6. Publish with GitHub Pages
 
-The official documentation is hosted at [English](https://ethyn13.github.io/red-libero/) and [简体中文](https://ethyn13.github.io/red-libero/zh/).
+The official documentation is hosted at [English](https://ethyn13.github.io/Red-LIBERO/) and [简体中文](https://ethyn13.github.io/Red-LIBERO/zh/).
 
-The [Documentation workflow](https://github.com/Ethyn13/red-libero/actions/workflows/docs.yml) builds and checks the site on pull requests and on relevant changes pushed to the main branch. Pull requests only validate the site. Successful builds on the main branch deploy to GitHub Pages automatically. You can also select **Run workflow** on the main branch to publish manually.
+The [Documentation workflow](https://github.com/Ethyn13/Red-LIBERO/actions/workflows/docs.yml) builds and checks the site on pull requests and on relevant changes pushed to the main branch. Pull requests only validate the site. Successful builds on the main branch deploy to GitHub Pages automatically. You can also select **Run workflow** on the main branch to publish manually.
 
 The repository uses **Settings → Pages → Build and deployment → Source: GitHub Actions**. The workflow uploads only the generated documentation site and deploys it through the github-pages environment. GitHub provides the deployment token; no personal access token is stored in the workflow.
 
 To reproduce the published build locally:
 
 ```bash
-export DOCS_SITE_URL=https://ethyn13.github.io/red-libero/
+export DOCS_SITE_URL=https://ethyn13.github.io/Red-LIBERO/
 python -m mkdocs build --strict
 python scripts/check_docs.py
 ```
 
-The workflow sets the same site URL for both the build and link checks, including the /red-libero/ prefix. Local previews continue to use the localhost default when DOCS_SITE_URL is unset.
+The workflow sets the same site URL for both the build and link checks, including the /Red-LIBERO/ prefix. Local previews continue to use the localhost default when DOCS_SITE_URL is unset.
 
 For a fork or another hosting destination, update DOCS_SITE_URL in the workflow and enable GitHub Pages in that repository. [redvla.github.io](https://redvla.github.io) remains the RedVLA project website.

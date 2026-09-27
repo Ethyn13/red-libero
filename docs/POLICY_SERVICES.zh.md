@@ -1,6 +1,6 @@
 # VLA 连接与配置
 
-Scene Studio 复用 **RedVLA 的模型工厂、观测转换和传输客户端**。GUI 管理当前 red-libero 场景，模型权重位于独立进程及 Python 环境。一个 profile 将连接配置与可选的服务启动器绑定。
+Scene Studio 复用 **RedVLA 的模型工厂、观测转换和传输客户端**。GUI 管理当前 Red-LIBERO 场景，模型权重位于独立进程及 Python 环境。一个 profile 将连接配置与可选的服务启动器绑定。
 
 | 模型 | GUI 协议 | 模型进程 |
 | --- | --- | --- |
@@ -24,7 +24,7 @@ Scene Studio 复用 **RedVLA 的模型工厂、观测转换和传输客户端**�
 
 ## 1. 独立 Conda 环境
 
-GUI 环境按[安装指南](installation.md)配置，使用 Python 3.10、NumPy 1.26.4 和 robosuite 1.5.1。保持 red-libero 代码与资产在同一源码目录。策略客户端安装方式：
+GUI 环境按[安装指南](installation.md)配置，使用 Python 3.10、NumPy 1.26.4 和 robosuite 1.5.1。保持 Red-LIBERO 代码与资产在同一源码目录。策略客户端安装方式：
 
 ```bash
 conda activate red-libero

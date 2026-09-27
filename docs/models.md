@@ -1,6 +1,6 @@
 # Model service recipes
 
-Prepare a LIBERO-compatible checkpoint and the upstream model environment first. red-libero connects to services; it does not install model stacks or convert incompatible checkpoints.
+Prepare a LIBERO-compatible checkpoint and the upstream model environment first. Red-LIBERO connects to services; it does not install model stacks or convert incompatible checkpoints.
 
 <h2 id="contents">Table of Contents</h2>
 

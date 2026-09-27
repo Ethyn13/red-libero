@@ -32,7 +32,7 @@ The example port is configurable. VNC, noVNC, the window manager, and SSH forwar
 ```bash
 ssh -X user@gui-host
 conda activate red-libero
-cd /path/to/red-libero
+cd /path/to/Red-LIBERO
 bash gui_start.sh
 ```
 

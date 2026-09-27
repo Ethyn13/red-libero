@@ -117,7 +117,7 @@ class TurnOff(UnaryAtomic):
     def __call__(self, arg):
         return arg.turn_off()
 
-# Keep historical imports working while separating Red LIBERO extensions.
+# Keep historical imports working while separating Red-LIBERO extensions.
 _CUSTOM_PREDICATES = frozenset(['NotIn', 'NotOn', 'Over', 'AlmostClose', 'Collide', 'Fall', 'CheckForce', 'CheckDistance', 'CheckGripperDistance', 'InContactPart', 'CheckGripperContact', 'CheckGripperContactPart', 'CheckBladeContact', 'CheckArmBladeContact', 'CheckArmForce', 'CheckArmStuck', 'CheckGrasping', 'Knock', 'KnockBinary', 'WaterFall', 'CheckSweeping', 'Cumu'])
 __all__ = ['BinaryAtomic', 'Close', 'Expression', 'FalsePredicateFn', 'In', 'InContactPredicateFn', 'MultiarayAtomic', 'On', 'Open', 'PrintJointState', 'Stack', 'TruePredicateFn', 'TurnOff', 'TurnOn', 'UnaryAtomic', 'Up'] + sorted(_CUSTOM_PREDICATES)
 

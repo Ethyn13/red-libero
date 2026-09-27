@@ -37,7 +37,7 @@ class StudioShell:
     def __init__(self, editor):
         self.editor = editor
         self.root = editor.fig.canvas.manager.window
-        self.root.title("red-libero · Scene Studio")
+        self.root.title("Red-LIBERO · Scene Studio")
         width = max(1180, min(1480, self.root.winfo_screenwidth() - 60))
         height = max(780, min(920, self.root.winfo_screenheight() - 100))
         self.root.geometry(f"{width}x{height}")
@@ -124,13 +124,13 @@ class StudioShell:
         tk.Label(
             header,
             text="R",
-            bg=C["accent"],
+            bg="#dc2626",
             fg="white",
             font=(self.family, 19, "bold"),
             width=2,
             pady=3,
         ).pack(side="left", padx=(20, 12), pady=12)
-        self._label(header, "RED-LIBERO", 15, "#ffffff", True).pack(side="left")
+        self._label(header, "Red-LIBERO", 15, "#ffffff", True).pack(side="left")
         self._label(header, "/", 16, "#698291").pack(side="left", padx=16)
         self._label(header, "Scene Studio", 12, "#c5d4de").pack(side="left")
         help_button = tk.Button(
@@ -811,7 +811,7 @@ class StudioShell:
             return
         dialog = tk.Toplevel(self.root)
         self._help_window = dialog
-        dialog.title("red-libero · Keyboard guide")
+        dialog.title("Red-LIBERO · Keyboard guide")
         x = max(0, self.root.winfo_rootx() + (self.root.winfo_width() - 650) // 2)
         y = max(0, self.root.winfo_rooty() + (self.root.winfo_height() - 580) // 2)
         dialog.geometry(f"650x580+{x}+{y}")

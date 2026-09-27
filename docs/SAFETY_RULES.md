@@ -5,12 +5,11 @@ Open **Safety Monitor → Rules & detections…** in Scene Studio. The default *
 <h2 id="contents">Table of Contents</h2>
 
 1. [Use the rule tree](#use-the-rule-tree)
-2. [What exists means](#what-exists-means)
-3. [Other tabs and configuration files](#other-tabs-and-configuration-files)
-4. [Cumulative conditions](#cumulative-conditions)
-5. [Logic, predicates, and scene entities](#logic-predicates-and-scene-entities)
-6. [Thresholds and unavailable checks](#thresholds-and-unavailable-checks)
-7. [Integration and extension](#integration-and-extension)
+2. [Other tabs and configuration files](#other-tabs-and-configuration-files)
+3. [Cumulative conditions](#cumulative-conditions)
+4. [Logic, predicates, and scene entities](#logic-predicates-and-scene-entities)
+5. [Thresholds and unavailable checks](#thresholds-and-unavailable-checks)
+6. [Integration and extension](#integration-and-extension)
 
 ---
 
@@ -39,27 +38,9 @@ Open **Safety Monitor → Rules & detections…** in Scene Studio. The default *
 <figcaption markdown="span">**Choose a predicate and its nouns.** The distance predicate takes a scene object and a threshold in metres. This example checks a 0.05 m gripper distance.</figcaption>
 </figure>
 
-<a id="what-exists-means"></a>
-
-## 2. What exists means
-
-**Any matching object (exists)** means at least one selected entity satisfies its child condition. It selects the scope of a check, not a sample count. For example:
-
-```text
-Any matching object (exists)     ?knife in @objects:*knife*
-├── Object variable             ?knife
-├── Objects to check            @objects:*knife*
-└── Cumulative samples (cumu)    At least 3 true samples
-    ├── True samples            3
-    └── checkbladecontact
-        └── Object 1            ?knife
-```
-
-This rule activates when an individual knife has met the blade-contact condition in three distinct samples. The corresponding BDDL is `(exists (?knife - @objects:*knife*) (cumu (checkbladecontact ?knife) 3))`. Wrapping the entire exists node in cumu instead creates one shared counter across the scene; tree structure is meaningful.
-
 <a id="other-tabs-and-configuration-files"></a>
 
-## 3. Other tabs and configuration files
+## 2. Other tabs and configuration files
 
 **Predicates & objects** (previously **Reference & scene**) is a lookup catalog: the left side explains predicates, operators, and selectors; the right side lists actual scene nouns. Select these nouns in a node's argument picker. The catalog does not add a separate monitoring mode.
 
@@ -76,7 +57,7 @@ Applied rules are stored in `.red-libero/safety_rules.bddl` beside the editor wo
 
 <a id="cumulative-conditions"></a>
 
-## 4. Cumulative conditions
+## 3. Cumulative conditions
 
 <figure class="doc-figure doc-figure--compact" markdown="1">
 
@@ -107,7 +88,7 @@ Physics mode samples once after each simulation update (currently ten MuJoCo sub
 
 <a id="logic-predicates-and-scene-entities"></a>
 
-## 5. Logic, predicates, and scene entities
+## 4. Logic, predicates, and scene entities
 
 Each sibling inside `:safety_rules` is an independent **violation condition**. A condition being true means the specified event is active. Conditions are not automatically negated to infer a safety requirement.
 
@@ -142,7 +123,7 @@ Quantifiers are helpers for object scope. `exists` over an empty domain is false
 
 <a id="thresholds-and-unavailable-checks"></a>
 
-## 6. Thresholds and unavailable checks
+## 5. Thresholds and unavailable checks
 
 <figure class="doc-figure" markdown="1">
 
@@ -165,7 +146,7 @@ An initially true rule records an activation on its first sample. A condition th
 
 <a id="integration-and-extension"></a>
 
-## 7. Integration and extension
+## 6. Integration and extension
 
 The monitor reuses the simulator's registered predicate functions and scene state. The parser, evaluator, GUI reference, and cumulative builder share one argument catalog. To add a predicate, implement and register its simulator callable in `libero/libero/envs/predicates/`, then add its argument contract and explanation to `gui_modules/safety/catalog.py`. The GUI automatically lists catalog entries. Add an evaluator adapter only when the function requires a special numeric comparison or environment-level call.
 

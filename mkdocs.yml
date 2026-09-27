@@ -1,14 +1,14 @@
-site_name: red-libero
+site_name: Red-LIBERO
 site_description: Scene editing, physical risk scenarios, and VLA evaluation.
 site_url: !ENV [DOCS_SITE_URL, "http://127.0.0.1:8765/"]
-repo_url: https://github.com/Ethyn13/red-libero
+repo_url: https://github.com/Ethyn13/Red-LIBERO
 repo_name: Source
 edit_uri: ""
 docs_dir: docs
 site_dir: site
 dev_addr: 127.0.0.1:8765
 strict: true
-copyright: red-libero · MIT license · Upstream notices retained
+copyright: Red-LIBERO · MIT license · Upstream notices retained
 
 theme:
   name: material
@@ -109,7 +109,7 @@ extra:
       link: https://redvla.github.io
       name: RedVLA project website
     - icon: fontawesome/brands/github
-      link: https://github.com/Ethyn13/red-libero
+      link: https://github.com/Ethyn13/Red-LIBERO
       name: Source repository
 
 nav:

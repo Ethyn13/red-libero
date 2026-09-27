@@ -1,6 +1,6 @@
 # Installation
 
-Install **red-libero** in a dedicated Conda environment. Model inference runs in separate environments; no model weights are needed for scene editing.
+Install **Red-LIBERO** in a dedicated Conda environment. Model inference runs in separate environments; no model weights are needed for scene editing.
 
 <h2 id="contents">Table of Contents</h2>
 
@@ -27,11 +27,11 @@ sudo apt-get install -y \
   libxrender1 libxext6 libxft2 fontconfig fonts-dejavu-core
 ```
 
-Obtain the source checkout from the [project repository](https://github.com/Ethyn13/red-libero), or use a release supplied by the project. Run the following commands in the directory containing `editor_gui.py` and `environment.yml`. Keep the bundled `libero/libero/assets/` directory with the checkout.
+Obtain the source checkout from the [project repository](https://github.com/Ethyn13/Red-LIBERO), or use a release supplied by the project. Run the following commands in the directory containing `editor_gui.py` and `environment.yml`. Keep the bundled `libero/libero/assets/` directory with the checkout.
 
 ```bash
-git clone https://github.com/Ethyn13/red-libero.git
-cd red-libero
+git clone https://github.com/Ethyn13/Red-LIBERO.git
+cd Red-LIBERO
 ```
 
 <a id="create-the-gui-environment"></a>
@@ -56,7 +56,7 @@ python -m pip check
 | MuJoCo | 3.3.7 |
 | PyTorch for state I/O | 2.5.1, CPU build |
 
-The complete pins are in [requirements/studio.txt](downloads/requirements/studio.txt); the interpreter and Tk specification is [environment.yml](downloads/environment.yml). The installed distribution is `red-libero`, with public imports under `red_libero`. The `libero.libero` namespace is retained for existing VLA clients and standard BDDL identifiers.
+The complete pins are in [requirements/studio.txt](downloads/requirements/studio.txt); the interpreter and Tk specification is [environment.yml](downloads/environment.yml). The installed distribution is `Red-LIBERO`, with public imports under `red_libero`. The `libero.libero` namespace is retained for existing VLA clients and standard BDDL identifiers.
 
 <a id="add-the-policy-client"></a>
 

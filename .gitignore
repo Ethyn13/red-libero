@@ -36,7 +36,7 @@ demonstration_data/
 # Machine-specific policy environments and checkpoints
 configs/policies/local/
 
-# Red LIBERO workspace and Python build artifacts
+# Red-LIBERO workspace and Python build artifacts
 .red-libero/
 *.egg-info/
 __pycache__/

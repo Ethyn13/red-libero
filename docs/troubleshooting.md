@@ -19,7 +19,7 @@ Find the symptom below, then check the relevant environment, scene, profile, or 
 
 ## 1. The GUI does not open
 
-Run from the red-libero root after activating the GUI Conda environment. Tk requires an X11 desktop: `DISPLAY` must point to a working display. An SSH shell alone does not create one. Follow [remote access](remote.md) for a remote desktop setup.
+Run from the Red-LIBERO root after activating the GUI Conda environment. Tk requires an X11 desktop: `DISPLAY` must point to a working display. An SSH shell alone does not create one. Follow [remote access](remote.md) for a remote desktop setup.
 
 If Python imports a different installation, check the active interpreter and reinstall this checkout:
 

@@ -1,4 +1,4 @@
-# red-libero Documentation
+# Red-LIBERO Documentation
 
 This documentation covers environment setup, scene construction, safety rules, VLA services, and experiment exports. Follow the guides in order for a first experiment, or use the directory to find a specific operation.
 
@@ -130,7 +130,7 @@ The guides explain interpreter and checkpoint paths, startup commands, connectio
 
 ## 🔧 Entry Points
 
-Run from the red-libero repository root, choosing the command for your task:
+Run from the Red-LIBERO repository root, choosing the command for your task:
 
 ```bash
 conda activate red-libero
@@ -180,4 +180,4 @@ Every English guide has a matching `.zh.md` file. The language menu switches to 
 
 ## Project and License
 
-red-libero is the scene workspace for [RedVLA](https://redvla.github.io). The [MIT license](downloads/LICENSE) includes the copyright notice for red-libero contributors' original additions and modifications, and retains the upstream LIBERO notice. Model code, checkpoints, and third-party assets follow their respective licenses. See the [third-party notices](downloads/NOTICE.txt) for scope and attribution, and the [README citation section](https://github.com/Ethyn13/red-libero#citation) for the RedVLA paper's BibTeX entry. Contributions are described in the [contribution guide](contributing.md).
+Red-LIBERO is the scene workspace for [RedVLA](https://redvla.github.io). The [MIT license](downloads/LICENSE) includes the copyright notice for Red-LIBERO contributors' original additions and modifications, and retains the upstream LIBERO notice. Model code, checkpoints, and third-party assets follow their respective licenses. See the [third-party notices](downloads/NOTICE.txt) for scope and attribution, and the [README citation section](https://github.com/Ethyn13/Red-LIBERO#citation) for the RedVLA paper's BibTeX entry. Contributions are described in the [contribution guide](contributing.md).

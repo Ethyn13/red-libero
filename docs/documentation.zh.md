@@ -17,7 +17,7 @@
 
 ## 1. 首次配置
 
-在 red-libero 根目录执行：
+在 Red-LIBERO 根目录执行：
 
 ```bash
 conda env create -f environment-docs.yml
@@ -79,20 +79,20 @@ docs/
 
 ## 6. 使用 GitHub Pages 发布
 
-正式文档地址：[English](https://ethyn13.github.io/red-libero/) · [简体中文](https://ethyn13.github.io/red-libero/zh/)。
+正式文档地址：[English](https://ethyn13.github.io/Red-LIBERO/) · [简体中文](https://ethyn13.github.io/Red-LIBERO/zh/)。
 
-[Documentation 工作流](https://github.com/Ethyn13/red-libero/actions/workflows/docs.yml)会在拉取请求以及主分支相关文件更新时构建并检查文档。拉取请求只执行检查；主分支构建成功后自动部署到 GitHub Pages。也可以在主分支上选择 **Run workflow** 手动发布。
+[Documentation 工作流](https://github.com/Ethyn13/Red-LIBERO/actions/workflows/docs.yml)会在拉取请求以及主分支相关文件更新时构建并检查文档。拉取请求只执行检查；主分支构建成功后自动部署到 GitHub Pages。也可以在主分支上选择 **Run workflow** 手动发布。
 
 仓库采用 **Settings → Pages → Build and deployment → Source: GitHub Actions**。工作流只上传生成的文档站点，通过 github-pages 环境部署。部署令牌由 GitHub 提供，工作流无需保存个人访问令牌。
 
 在本地复现线上构建：
 
 ```bash
-export DOCS_SITE_URL=https://ethyn13.github.io/red-libero/
+export DOCS_SITE_URL=https://ethyn13.github.io/Red-LIBERO/
 python -m mkdocs build --strict
 python scripts/check_docs.py
 ```
 
-工作流为构建和链接检查设置相同的站点地址，包含 /red-libero/ 路径前缀。未设置 DOCS_SITE_URL 时，本地预览继续使用默认的 localhost 地址。
+工作流为构建和链接检查设置相同的站点地址，包含 /Red-LIBERO/ 路径前缀。未设置 DOCS_SITE_URL 时，本地预览继续使用默认的 localhost 地址。
 
 如果使用 fork 仓库或其他托管地址，请修改工作流中的 DOCS_SITE_URL，并在对应仓库启用 GitHub Pages。[redvla.github.io](https://redvla.github.io)继续作为 RedVLA 项目主页。

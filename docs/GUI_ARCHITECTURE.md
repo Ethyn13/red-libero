@@ -56,7 +56,7 @@ Physics mode checks once after an actual simulation update. Human Assist and AI 
 
 ## 4. Predicates
 
-`libero/libero/envs/predicates/base_predicates.py` retains the upstream LIBERO classes. Red LIBERO extensions live in `custom_predicates.py`; `__init__.py` registers them. Historical imports of custom predicates from `base_predicates` remain supported through lazy exports.
+`libero/libero/envs/predicates/base_predicates.py` retains the upstream LIBERO classes. Red-LIBERO extensions live in `custom_predicates.py`; `__init__.py` registers them. Historical imports of custom predicates from `base_predicates` remain supported through lazy exports.
 
 Add new custom predicates to `custom_predicates.py` and register them in `VALIDATE_PREDICATE_FN_DICT`. Add a predicate to `TEMPORAL_PREDICATE_FN_LIST` only when it uses the existing temporal evaluation path. Contact-only grasp strategies share their object lookup and finger-contact sampling in `grasping.py`; the advanced strategy retains its separate lift and distance criteria.
 

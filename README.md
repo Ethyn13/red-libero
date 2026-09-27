@@ -1,4 +1,4 @@
-<h1 align="center">red-libero · Scene Studio</h1>
+<h1 align="center">Red-LIBERO · Scene Studio</h1>
 
 <p align="center">
   <strong>An interactive environment for building physical risk scenarios and evaluating vision-language-action policies.</strong>
@@ -13,18 +13,18 @@
 <p align="center">
   <a href="https://redvla.github.io/"><img src="https://img.shields.io/badge/Website-redvla.github.io-1677c8.svg" alt="Project website"></a>
   <a href="https://arxiv.org/abs/2604.22591"><img src="https://img.shields.io/badge/arXiv-2604.22591-b31b1b.svg" alt="Paper: arXiv 2604.22591"></a>
-  <a href="https://ethyn13.github.io/red-libero/"><img src="https://img.shields.io/badge/Docs-English-1677c8.svg" alt="Documentation"></a>
-  <a href="https://ethyn13.github.io/red-libero/zh/"><img src="https://img.shields.io/badge/Docs-%E4%B8%AD%E6%96%87-1677c8.svg" alt="中文文档"></a>
-  <a href="https://ethyn13.github.io/red-libero/POLICY_SERVICES/"><img src="https://img.shields.io/badge/VLA-Integration-0E766E.svg" alt="VLA integration"></a>
+  <a href="https://ethyn13.github.io/Red-LIBERO/"><img src="https://img.shields.io/badge/Docs-English-1677c8.svg" alt="Documentation"></a>
+  <a href="https://ethyn13.github.io/Red-LIBERO/zh/"><img src="https://img.shields.io/badge/Docs-%E4%B8%AD%E6%96%87-1677c8.svg" alt="中文文档"></a>
+  <a href="https://ethyn13.github.io/Red-LIBERO/POLICY_SERVICES/"><img src="https://img.shields.io/badge/VLA-Integration-0E766E.svg" alt="VLA integration"></a>
   <a href="#citation"><img src="https://img.shields.io/badge/Citation-BibTeX-4051b5.svg" alt="Citation"></a>
   <a href="#license"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
 </p>
 
-**red-libero** is the scene editing and simulation workspace for **RedVLA**. It provides a desktop editor, physical risk objects and safety predicates, scene snapshots, and service-based VLA execution. Build a scene, connect a policy running in its own environment, and inspect its actions, task outcome, and safety events in one place.
+**Red-LIBERO** is the scene editing and simulation workspace for **RedVLA**. It provides a desktop editor, physical risk objects and safety predicates, scene snapshots, and service-based VLA execution. Build a scene, connect a policy running in its own environment, and inspect its actions, task outcome, and safety events in one place.
 
 The desktop interface uses **Tkinter / ttk**, with a **Matplotlib TkAgg** canvas for the main and wrist camera views. **MuJoCo / robosuite** provides simulation and image rendering. VNC / noVNC can expose the desktop interface in a browser.
 
-![Red LIBERO Scene Studio: scene objects, task instruction, two camera views, and policy controls](docs/images/studio-overview.png)
+![Red-LIBERO Scene Studio: scene objects, task instruction, two camera views, and policy controls](docs/images/studio-overview.png)
 
 ## Contents
 
@@ -55,7 +55,7 @@ The desktop interface uses **Tkinter / ttk**, with a **Matplotlib TkAgg** canvas
 | Safety monitoring | Evaluate the configured safety predicates and inspect recorded events alongside task success. |
 | Export | Save BDDL/state/metadata bundles, dual-camera videos, and HDF5 policy trajectories. |
 
-**Entering AI policy does not move the robot.** Execution begins only after **Start run**. The controls also support Pause / resume and Replay. Red LIBERO runs the scene open in the editor; use the companion [RedVLA project](https://redvla.github.io) for batch evaluation and automated placement search.
+**Entering AI policy does not move the robot.** Execution begins only after **Start run**. The controls also support Pause / resume and Replay. Red-LIBERO runs the scene open in the editor; use the companion [RedVLA project](https://redvla.github.io) for batch evaluation and automated placement search.
 
 ## Installation
 
@@ -73,8 +73,8 @@ sudo apt-get install -y   libosmesa6 libgl1 libegl1 libglib2.0-0   libxrender1 l
 Clone this repository and enter its root. Keep the bundled `libero/libero/assets/` directory with the source checkout.
 
 ```bash
-git clone https://github.com/Ethyn13/red-libero.git
-cd red-libero
+git clone https://github.com/Ethyn13/Red-LIBERO.git
+cd Red-LIBERO
 ```
 
 ### 2. Create the GUI Conda environment
@@ -99,7 +99,7 @@ The [Conda specification](environment.yml) prepares the interpreter and Tk. [req
 | MuJoCo | 3.3.7 |
 | PyTorch, GUI-side state I/O | 2.5.1, CPU build |
 
-The installed distribution is **`red-libero`** and its public Python API is **`red_libero`**. Install this checkout so the code and assets stay together. Existing VLA clients can continue using `libero.libero` imports; those names and standard BDDL task identifiers are retained for compatibility. The root `requirements.txt` forwards to the same Studio dependencies.
+The installed distribution is **`Red-LIBERO`** and its public Python API is **`red_libero`**. Install this checkout so the code and assets stay together. Existing VLA clients can continue using `libero.libero` imports; those names and standard BDDL task identifiers are retained for compatibility. The root `requirements.txt` forwards to the same Studio dependencies.
 
 ### 3. Add the VLA client
 
@@ -152,7 +152,7 @@ The GUI and the model are separate processes. The GUI sends observations from it
 
 ```mermaid
 flowchart LR
-    GUI["Red LIBERO GUI · Conda environment"] -->|"HTTP via RedVLA"| HTTP["OpenVLA / VLA-Adapter · model environment"]
+    GUI["Red-LIBERO GUI · Conda environment"] -->|"HTTP via RedVLA"| HTTP["OpenVLA / VLA-Adapter · model environment"]
     GUI -->|"OpenPI WebSocket"| PI["π0 · OpenPI environment"]
     HTTP -->|"Action commands"| GUI
     PI -->|"Action chunks"| GUI
@@ -387,7 +387,7 @@ For bug reports, include the reproduction steps, package versions, renderer, rel
 
 ## Citation
 
-If you use red-libero to construct risk scenarios, run VLA policies, or evaluate physical safety in your research, please cite the accompanying [RedVLA paper](https://arxiv.org/abs/2604.22591):
+If you use Red-LIBERO to construct risk scenarios, run VLA policies, or evaluate physical safety in your research, please cite the accompanying [RedVLA paper](https://arxiv.org/abs/2604.22591):
 
 ```bibtex
 @misc{zhang2026redvlaphysicalredteaming,
@@ -403,12 +403,12 @@ If you use red-libero to construct risk scenarios, run VLA policies, or evaluate
 
 ## License
 
-The source code is released under the **[MIT License](LICENSE)**. Original additions and modifications developed for red-libero are copyright (c) 2026 red-libero contributors. The same license file retains the copyright (c) 2023 Lifelong Robot Learning notice for code derived from LIBERO.
+The source code is released under the **[MIT License](LICENSE)**. Original additions and modifications developed for Red-LIBERO are copyright (c) 2026 Red-LIBERO contributors. The same license file retains the copyright (c) 2023 Lifelong Robot Learning notice for code derived from LIBERO.
 
 Code derived from LIBERO retains its upstream attribution. Third-party assets, dependencies, external model implementations, and checkpoints remain subject to their respective licenses; the repository's MIT license does not replace those terms. See [third-party notices](NOTICE.md) for the attribution and licensing scope.
 
 ## Acknowledgments
 
-red-libero builds on [LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO) and the MuJoCo / robosuite ecosystem. We thank their authors and maintainers, as well as the OpenVLA, VLA-Adapter, and OpenPI teams whose model interfaces support policy evaluation.
+Red-LIBERO builds on [LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO) and the MuJoCo / robosuite ecosystem. We thank their authors and maintainers, as well as the OpenVLA, VLA-Adapter, and OpenPI teams whose model interfaces support policy evaluation.
 
-The retained `libero.libero` import paths and standard BDDL task identifiers provide compatibility with existing VLA workflows. The editor, documentation, and public project interface are maintained as **red-libero**, the scene workspace for [RedVLA](https://redvla.github.io).
+The retained `libero.libero` import paths and standard BDDL task identifiers provide compatibility with existing VLA workflows. The editor, documentation, and public project interface are maintained as **Red-LIBERO**, the scene workspace for [RedVLA](https://redvla.github.io).

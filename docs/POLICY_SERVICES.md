@@ -1,6 +1,6 @@
 # Connecting VLA policies
 
-Scene Studio uses the **same model factory, observation conversion, and transport clients as RedVLA**. The GUI owns the current Red LIBERO scene; model weights stay in their own process and Python environment. A profile binds a connection to an optional service launcher.
+Scene Studio uses the **same model factory, observation conversion, and transport clients as RedVLA**. The GUI owns the current Red-LIBERO scene; model weights stay in their own process and Python environment. A profile binds a connection to an optional service launcher.
 
 | Model | GUI protocol | Model process |
 | --- | --- | --- |
@@ -23,7 +23,7 @@ Scene Studio uses the **same model factory, observation conversion, and transpor
 
 ## 1. Install in separate Conda environments
 
-Create the GUI environment using the [installation guide](installation.md). It uses Anaconda/Miniconda, Python 3.10, `numpy==1.26.4`, and `robosuite==1.5.1`. Install this checkout as the `red-libero` distribution; keep its assets and code together. The `libero.libero` module namespace remains compatible with existing model clients. For the policy client, install the base RedVLA package from the red-libero root:
+Create the GUI environment using the [installation guide](installation.md). It uses Anaconda/Miniconda, Python 3.10, `numpy==1.26.4`, and `robosuite==1.5.1`. Install this checkout as the `Red-LIBERO` distribution; keep its assets and code together. The `libero.libero` module namespace remains compatible with existing model clients. For the policy client, install the base RedVLA package from the Red-LIBERO root:
 
 ```bash
 conda activate red-libero

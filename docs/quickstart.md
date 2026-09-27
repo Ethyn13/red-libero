@@ -1,6 +1,6 @@
 # Your first scene
 
-Complete [installation](installation.md), then run these steps from the red-libero root in a desktop session.
+Complete [installation](installation.md), then run these steps from the Red-LIBERO root in a desktop session.
 
 <h2 id="contents">Table of Contents</h2>
 

@@ -10,13 +10,13 @@ studio_requirements = [
 ]
 
 setup(
-    name="red-libero",
+    name="Red-LIBERO",
     version="0.1.0",
     description="Scene editing, physical risk scenarios, and VLA evaluation for RedVLA",
     long_description=(root / "README.md").read_text(encoding="utf-8"),
     long_description_content_type="text/markdown",
     author="RedVLA contributors",
-    url="https://redvla.github.io",
+    url="https://ethyn13.github.io/Red-LIBERO/",
     license="MIT",
     license_files=["LICENSE", "NOTICE.md"],
     python_requires=">=3.10",

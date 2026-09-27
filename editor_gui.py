@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Red LIBERO scene editor and interactive VLA workspace."""
+"""Red-LIBERO scene editor and interactive VLA workspace."""
 
 import os
 import sys
@@ -36,7 +36,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 try:
     from red_libero import benchmark, get_path as get_libero_path, OffScreenRenderEnv
 except ImportError as e:
-    print(f"Cannot import red-libero: {e}")
+    print(f"Cannot import Red-LIBERO: {e}")
     print(f"Current sys.path: {sys.path[:3]}")
     print(f"Script directory: {os.path.dirname(__file__)}")
     sys.exit(1)
@@ -98,7 +98,7 @@ class MatplotlibGUIEditor:
         shutil.copy2(self.bddl_file, self.current_bddl)
 
         print(f"\n{'='*70}")
-        print(f"red-libero Scene Studio - Matplotlib GUI")
+        print(f"Red-LIBERO Scene Studio - Matplotlib GUI")
         print(f"{'='*70}")
         print(f"Source BDDL: {self.bddl_file}")
         print(f"Initial BDDL: {self.initial_bddl} (press R to restore)")
@@ -112,7 +112,7 @@ class MatplotlibGUIEditor:
         self.window_width = 640
         self.window_height = 480
 
-        print("Starting the red-libero simulator...")
+        print("Starting the Red-LIBERO simulator...")
         self.env = None
         self.object_info = {}
 
@@ -132,7 +132,7 @@ class MatplotlibGUIEditor:
         self._original_colors = {}  # {obj_name: {geom_id: original_rgba}}
 
         self.fig = plt.figure(figsize=(21, 7.5))
-        self.fig.canvas.manager.set_window_title('red-libero Scene Studio')
+        self.fig.canvas.manager.set_window_title('Red-LIBERO Scene Studio')
 
         self.fig.subplots_adjust(top=0.92, bottom=0.08)
 
@@ -4083,7 +4083,7 @@ class MatplotlibGUIEditor:
 def main():
     import argparse
 
-    parser = argparse.ArgumentParser(description="red-libero Scene Studio")
+    parser = argparse.ArgumentParser(description="Red-LIBERO Scene Studio")
     parser.add_argument("bddl_file", nargs="?", default=None, help="BDDL task file")
     parser.add_argument("--save-dir", "-d", default=None,
                        help="Scene export directory")

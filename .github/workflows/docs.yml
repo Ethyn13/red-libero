@@ -38,7 +38,7 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 env:
-  DOCS_SITE_URL: https://ethyn13.github.io/red-libero/
+  DOCS_SITE_URL: https://ethyn13.github.io/Red-LIBERO/
 
 jobs:
   build:

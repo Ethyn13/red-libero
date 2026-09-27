@@ -1,4 +1,4 @@
-"""Resource paths for a Red LIBERO checkout."""
+"""Resource paths for a Red-LIBERO checkout."""
 
 import hashlib
 import os
@@ -47,14 +47,14 @@ def ensure_config():
     paths = yaml.safe_load(CONFIG_FILE.read_text(encoding="utf-8"))
     required = set(get_default_paths())
     if not isinstance(paths, dict) or not required.issubset(paths):
-        raise ValueError(f"Incomplete red-libero resource configuration: {CONFIG_FILE}")
+        raise ValueError(f"Incomplete Red-LIBERO resource configuration: {CONFIG_FILE}")
     return paths
 
 
 def get_path(key):
     paths = ensure_config()
     if key not in paths:
-        raise KeyError(f"Unknown red-libero path {key!r}; available: {', '.join(paths)}")
+        raise KeyError(f"Unknown Red-LIBERO path {key!r}; available: {', '.join(paths)}")
     return paths[key]
 
 

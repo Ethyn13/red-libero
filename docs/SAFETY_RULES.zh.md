@@ -5,14 +5,13 @@
 <h2 id="contents">目录</h2>
 
 1. [使用规则树](#_2)
-2. [exists 是什么意思](#exists)
-3. [其他页面与配置文件](#_3)
-4. [cumu 的累计语义](#cumu)
-    - [4.1 各模式的采样单位](#_4)
-    - [4.2 对象计数与共享计数](#_5)
-5. [逻辑、名词与选择器](#_6)
-6. [数值阈值与不可用检测](#_7)
-7. [扩展与迁移](#_8)
+2. [其他页面与配置文件](#_3)
+3. [cumu 的累计语义](#cumu)
+    - [3.1 各模式的采样单位](#_4)
+    - [3.2 对象计数与共享计数](#_5)
+4. [逻辑、名词与选择器](#_6)
+5. [数值阈值与不可用检测](#_7)
+6. [扩展与迁移](#_8)
 
 ---
 
@@ -43,34 +42,9 @@
 <figcaption markdown="span">**选择谓词与对象参数.** 距离谓词需要场景对象和以米为单位的阈值。图中以 0.05 m 为阈值检查夹爪与物体的距离。</figcaption>
 </figure>
 
-<a id="exists"></a>
-
-## 2. exists 是什么意思
-
-**Any matching object (exists)** 表示“选定范围内，至少有一个对象满足子条件”。它定义对象范围，不表示累计次数。
-
-```text
-Any matching object (exists)     ?knife in @objects:*knife*
-├── Object variable             ?knife
-├── Objects to check            @objects:*knife*
-└── Cumulative samples (cumu)    At least 3 true samples
-    ├── True samples            3
-    └── checkbladecontact
-        └── Object 1            ?knife
-```
-
-该树表示：任意一把刀的刀刃接触条件在不同采样中累计成立三次，就触发规则。对应表达式：
-
-```lisp
-(exists (?knife - @objects:*knife*)
-  (cumu (checkbladecontact ?knife) 3))
-```
-
-`?knife` 是代表当前匹配对象的变量；`@objects:*knife*` 从可移动物体中筛选名称含 `knife` 的对象。把 cumu 放到 exists 外面会形成全场景共享计数器，因此树的嵌套顺序具有实际含义。
-
 <a id="_3"></a>
 
-## 3. 其他页面与配置文件
+## 2. 其他页面与配置文件
 
 **Predicates & objects** 原名 Reference & scene，是查询目录：左侧解释谓词、运算和选择器，右侧列出真实场景名词。编辑节点时从参数下拉框选择这些名词。
 
@@ -87,7 +61,7 @@ Apply 后，规则保存到启动目录的 `.red-libero/safety_rules.bddl`，切
 
 <a id="cumu"></a>
 
-## 4. cumu 的累计语义
+## 3. cumu 的累计语义
 
 <figure class="doc-figure doc-figure--compact" markdown="1">
 
@@ -116,13 +90,13 @@ Apply 后，规则保存到启动目录的 `.red-libero/safety_rules.bddl`，切
 
 <a id="_4"></a>
 
-### 4.1 各模式的采样单位
+### 3.1 各模式的采样单位
 
 Physics 每次真实仿真更新后检查一次，目前一次更新包含十个 MuJoCo 子步；Human Assist 和 AI policy 在每个动作后检查，AI 稳定动作也计入。渲染、暂停和等待推理不会增加采样。跨实验比较时应使用相同模式与采样频率。
 
 <a id="_5"></a>
 
-### 4.2 对象计数与共享计数
+### 3.2 对象计数与共享计数
 
 ```lisp
 ; One counter per knife.
@@ -139,7 +113,7 @@ Physics 每次真实仿真更新后检查一次，目前一次更新包含十个
 
 <a id="_6"></a>
 
-## 5. 逻辑、名词与选择器
+## 4. 逻辑、名词与选择器
 
 `:safety_rules` 下的同级表达式是独立违规条件，不会自动取反来推导安全要求。
 
@@ -163,7 +137,7 @@ Physics 每次真实仿真更新后检查一次，目前一次更新包含十个
 
 <a id="_7"></a>
 
-## 6. 数值阈值与不可用检测
+## 5. 数值阈值与不可用检测
 
 <figure class="doc-figure" markdown="1">
 
@@ -186,7 +160,7 @@ Physics 每次真实仿真更新后检查一次，目前一次更新包含十个
 
 <a id="_8"></a>
 
-## 7. 扩展与迁移
+## 6. 扩展与迁移
 
 监控复用仿真器已注册的谓词。添加自定义谓词时，在 `libero/libero/envs/predicates/` 中实现并注册，再向 `gui_modules/safety/catalog.py` 添加参数契约和解释。特殊数值比较或环境级调用需要相应求值适配；普通对象谓词可以直接复用注册函数。
 

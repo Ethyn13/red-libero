@@ -1,6 +1,6 @@
 # 环境安装
 
-使用独立的 Conda 环境安装 **red-libero**。模型推理使用各自的环境；编辑场景时无需加载模型权重。
+使用独立的 Conda 环境安装 **Red-LIBERO**。模型推理使用各自的环境；编辑场景时无需加载模型权重。
 
 <h2 id="contents">目录</h2>
 
@@ -27,11 +27,11 @@ sudo apt-get install -y \
   libxrender1 libxext6 libxft2 fontconfig fonts-dejavu-core
 ```
 
-从[项目仓库](https://github.com/Ethyn13/red-libero)或项目发布包获取源码。以下命令均在包含 `editor_gui.py` 和 `environment.yml` 的目录执行。请保留随源码提供的 `libero/libero/assets/` 资产目录。
+从[项目仓库](https://github.com/Ethyn13/Red-LIBERO)或项目发布包获取源码。以下命令均在包含 `editor_gui.py` 和 `environment.yml` 的目录执行。请保留随源码提供的 `libero/libero/assets/` 资产目录。
 
 ```bash
-git clone https://github.com/Ethyn13/red-libero.git
-cd red-libero
+git clone https://github.com/Ethyn13/Red-LIBERO.git
+cd Red-LIBERO
 ```
 
 <a id="gui"></a>
@@ -56,7 +56,7 @@ python -m pip check
 | MuJoCo | 3.3.7 |
 | 用于状态读写的 PyTorch | 2.5.1，CPU 版本 |
 
-完整版本锁定见 [requirements/studio.txt](downloads/requirements/studio.txt)，解释器与 Tk 配置见 [environment.yml](downloads/environment.yml)。安装后的发行包名称为 `red-libero`，公开导入入口为 `red_libero`。为兼容已有 VLA 客户端和 BDDL 标识符，保留 `libero.libero` 命名空间。
+完整版本锁定见 [requirements/studio.txt](downloads/requirements/studio.txt)，解释器与 Tk 配置见 [environment.yml](downloads/environment.yml)。安装后的发行包名称为 `Red-LIBERO`，公开导入入口为 `red_libero`。为兼容已有 VLA 客户端和 BDDL 标识符，保留 `libero.libero` 命名空间。
 
 <a id="_3"></a>
 

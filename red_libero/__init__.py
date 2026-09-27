@@ -1,4 +1,4 @@
-"""Red LIBERO resources and simulation API."""
+"""Red-LIBERO resources and simulation API."""
 
 from importlib import import_module
 

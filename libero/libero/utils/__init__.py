@@ -1,4 +1,4 @@
-"""Compatibility aliases for the shared Red LIBERO resource configuration."""
+"""Compatibility aliases for the shared Red-LIBERO resource configuration."""
 
 from red_libero.paths import CONFIG_DIR, CONFIG_FILE, get_default_paths, get_path, set_default_paths
 

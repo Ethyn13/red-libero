@@ -16,7 +16,7 @@ class SafetyRulesDialog:
     def __init__(self, shell):
         self.shell, self.editor = shell, shell.editor
         self.window = tk.Toplevel(shell.root)
-        self.window.title("Safety rules · red-libero")
+        self.window.title("Safety rules · Red-LIBERO")
         self.window.geometry("1040x740")
         self.window.minsize(860, 620)
         self.window.configure(bg=COLORS["surface"])

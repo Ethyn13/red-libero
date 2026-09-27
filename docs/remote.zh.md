@@ -32,7 +32,7 @@ ssh -N -L 6085:127.0.0.1:6085 user@gui-host
 ```bash
 ssh -X user@gui-host
 conda activate red-libero
-cd /path/to/red-libero
+cd /path/to/Red-LIBERO
 bash gui_start.sh
 ```
 

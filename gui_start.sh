@@ -34,5 +34,5 @@ studio_args=("$@")
 if [[ $# -eq 0 || "$1" == -* ]]; then
     studio_args=("$studio_dir/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate.bddl" "${studio_args[@]}")
 fi
-echo "red-libero · Scene Studio | renderer: $MUJOCO_GL | Python: $studio_python"
+echo "Red-LIBERO · Scene Studio | renderer: $MUJOCO_GL | Python: $studio_python"
 exec "$studio_python" "$studio_dir/editor_gui.py" "${studio_args[@]}"

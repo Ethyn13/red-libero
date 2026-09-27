@@ -19,7 +19,7 @@
 
 ## 1. GUI 无法打开
 
-激活 GUI 的 Conda 环境后，从 red-libero 根目录启动。Tk 需要 X11 桌面，`DISPLAY` 必须指向可用的显示会话。仅通过 SSH 登录不会自动创建桌面，远程操作见[远程访问](remote.md)。
+激活 GUI 的 Conda 环境后，从 Red-LIBERO 根目录启动。Tk 需要 X11 桌面，`DISPLAY` 必须指向可用的显示会话。仅通过 SSH 登录不会自动创建桌面，远程操作见[远程访问](remote.md)。
 
 如果 Python 导入了其他安装位置，先检查解释器，再安装当前源码：
 

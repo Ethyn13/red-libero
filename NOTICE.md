@@ -2,13 +2,13 @@
 
 ## Project code
 
-red-libero is the scene editing and simulation workspace for RedVLA. Its source code is distributed under the MIT License in [LICENSE](LICENSE).
+Red-LIBERO is the scene editing and simulation workspace for RedVLA. Its source code is distributed under the MIT License in [LICENSE](LICENSE).
 
-Original additions and modifications developed for red-libero are covered by:
+Original additions and modifications developed for Red-LIBERO are covered by:
 
-> Copyright (c) 2026 red-libero contributors
+> Copyright (c) 2026 Red-LIBERO contributors
 
-This notice applies to the red-libero contributions and does not replace the copyright notices for upstream code or third-party materials. Preserve applicable copyright and license notices when redistributing source or binaries.
+This notice applies to the Red-LIBERO contributions and does not replace the copyright notices for upstream code or third-party materials. Preserve applicable copyright and license notices when redistributing source or binaries.
 
 ## LIBERO-derived code
 
@@ -16,7 +16,7 @@ This repository includes code derived from [LIBERO](https://github.com/Lifelong-
 
 > Copyright (c) 2023 Lifelong Robot Learning
 
-The compatible simulation modules, task definitions, and resource structure remain under `libero/`. Existing import paths do not imply that red-libero is an official upstream LIBERO release.
+The compatible simulation modules, task definitions, and resource structure remain under `libero/`. Existing import paths do not imply that Red-LIBERO is an official upstream LIBERO release.
 
 ## Dependencies and model integrations
 

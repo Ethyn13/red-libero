@@ -1,4 +1,4 @@
-# red-libero 文档目录
+# Red-LIBERO 文档目录
 
 本文档涵盖环境配置、场景构建、安全规则、VLA 服务接入和实验数据导出。可以按下方指南完成一次实验，也可以根据目录查找具体操作。
 
@@ -130,7 +130,7 @@
 
 ## 🔧 命令入口
 
-在 red-libero 仓库根目录运行，按需选择对应启动命令：
+在 Red-LIBERO 仓库根目录运行，按需选择对应启动命令：
 
 ```bash
 conda activate red-libero
@@ -180,4 +180,4 @@ docs/
 
 ## 项目与许可证
 
-red-libero 是 [RedVLA](https://redvla.github.io) 的场景工作台。[MIT 许可证](downloads/LICENSE)包含 red-libero 贡献者对原创新增和修改部分的版权声明，并保留上游 LIBERO 的版权声明。模型代码、权重与第三方资产分别遵循其自身许可证。许可范围和来源说明见[第三方声明](downloads/NOTICE.txt)；配套 RedVLA 论文的 BibTeX 条目见 [README 引用部分](https://github.com/Ethyn13/red-libero#citation)。参与开发请阅读[贡献指南](contributing.md)。
+Red-LIBERO 是 [RedVLA](https://redvla.github.io) 的场景工作台。[MIT 许可证](downloads/LICENSE)包含 Red-LIBERO 贡献者对原创新增和修改部分的版权声明，并保留上游 LIBERO 的版权声明。模型代码、权重与第三方资产分别遵循其自身许可证。许可范围和来源说明见[第三方声明](downloads/NOTICE.txt)；配套 RedVLA 论文的 BibTeX 条目见 [README 引用部分](https://github.com/Ethyn13/Red-LIBERO#citation)。参与开发请阅读[贡献指南](contributing.md)。

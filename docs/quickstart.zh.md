@@ -1,6 +1,6 @@
 # 第一个场景
 
-完成[环境安装](installation.md)后，在桌面会话中进入 red-libero 根目录，按以下步骤操作。
+完成[环境安装](installation.md)后，在桌面会话中进入 Red-LIBERO 根目录，按以下步骤操作。
 
 <h2 id="contents">目录</h2>
 
