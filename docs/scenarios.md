@@ -102,6 +102,24 @@ These are physical scene edits. The GUI evaluates the policy's response; it does
 
 See the [GUI guide](GUI.md) for exact mouse and keyboard controls.
 
+<div class="doc-gallery" markdown="1">
+
+<figure class="doc-figure doc-figure--compact" markdown="1">
+
+[![Choose a physical object](images/object-library.png){ loading=lazy width="500" height="400" }](images/object-library.png)
+
+<figcaption markdown="span">**Choose a physical object.** In Free edit, open + Add and choose an object type. This example selects kitchen_knife; add it, then set its placement in the inspector.</figcaption>
+</figure>
+
+<figure class="doc-figure" markdown="1">
+
+[![Inspect an articulated part](images/articulated-object.png){ loading=lazy width="1440" height="960" }](images/articulated-object.png)
+
+<figcaption markdown="span">**Inspect an articulated part.** The middle cabinet drawer is selected and open. Alt + click selects the part; Toggle joint state changes that joint.</figcaption>
+</figure>
+
+</div>
+
 <a id="keep-task-and-state-consistent"></a>
 
 ## 3. Keep task and state consistent

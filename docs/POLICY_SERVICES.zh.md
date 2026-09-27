@@ -43,6 +43,35 @@ GUI 不会从模型环境导入模型后端。彼此冲突的 Torch、Transforme
 
 ## 2. 在 Choose model 中配置
 
+按标签顺序完成配置。截图使用示例 profile；连接检查前，请先配置自己的模型服务。
+
+=== "Connection"
+
+    <figure class="doc-figure" markdown="1">
+
+    [![连接策略服务](images/policy-connection.png){ loading=lazy width="1040" height="780" }](images/policy-connection.png)
+
+    <figcaption markdown="span">**连接策略服务.** 设置协议、服务地址与超时。图中使用本机 RedVLA HTTP 服务地址；OpenPI 使用 WebSocket。</figcaption>
+    </figure>
+
+=== "Launch"
+
+    <figure class="doc-figure" markdown="1">
+
+    [![绑定模型运行环境](images/policy-launch.png){ loading=lazy width="1040" height="780" }](images/policy-launch.png)
+
+    <figcaption markdown="span">**绑定模型运行环境.** 选择模型环境的 Python、工作目录、启动脚本及参数。图中的 /path/to 路径是填写示例，需要替换为自己的实际路径。</figcaption>
+    </figure>
+
+=== "Run"
+
+    <figure class="doc-figure" markdown="1">
+
+    [![设置运行步数预算](images/policy-run-settings.png){ loading=lazy width="1040" height="780" }](images/policy-run-settings.png)
+
+    <figcaption markdown="span">**设置运行步数预算.** 配置最大步数、初始稳定步数和推理种子。稳定步数计入总预算。</figcaption>
+    </figure>
+
 1. 打开 **Choose model**，从 `configs/policies/` 选择模板，或点击 **Import YAML**。
 2. 在 **Connection** 设置协议、地址和超时。RedVLA 服务使用 HTTP，OpenPI 使用 WebSocket。
 3. 在 **Launch** 选择模型环境中的 Python、仓库工作目录及命令参数。每行一个参数，`{python}` 会展开成指定解释器。**Choose startup script** 支持 Python、Shell 和可执行文件。环境 JSON 中可填写 `CUDA_VISIBLE_DEVICES`。
@@ -124,3 +153,10 @@ GUI 从当前同一个仿真器获得 256×256 的双摄像头图像和本体状
 运行在任务成功、环境终止、预算耗尽或错误时停止。稳定步数计入 `max_steps`。`seed` 作为 HTTP 推理上下文传递，具体是否使用取决于后端；标准 OpenPI 不传递该字段。它不会重新采样当前编辑场景。
 
 缺失配置或连接失败不会产生占位动作。HTTP episode 租约阻止多个客户端同时占用一个模型 episode。并发评测应使用独立服务；标准 OpenPI 也应在运行时为当前 GUI 独占服务。
+
+<figure class="doc-figure" markdown="1">
+
+[![准备好后再开始运行](images/policy-ready.png){ loading=lazy width="1440" height="960" }](images/policy-ready.png)
+
+<figcaption markdown="span">**准备好后再开始运行.** AI policy 已准备就绪，Start run 按钮可用。截图时尚未发起模型推理，也未开始机器人执行。</figcaption>
+</figure>

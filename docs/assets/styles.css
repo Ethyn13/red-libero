@@ -56,3 +56,64 @@
 @media (min-width: 60em) and (max-width: 76.234375em) {
   .md-tabs { display: block; }
 }
+
+/* Screenshots stay readable in full-width guides and compact visual indexes. */
+.md-typeset .doc-figure {
+  width: 100%;
+  max-width: 100%;
+  margin: 1.4rem 0;
+  padding: .65rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .5rem;
+  background: var(--md-default-bg-color);
+  overflow: hidden;
+}
+.md-typeset .doc-figure > p { margin: 0; }
+.md-typeset .doc-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 0;
+  border-radius: .2rem;
+}
+.md-typeset .doc-figure > p > a { display: block; cursor: zoom-in; }
+.md-typeset .doc-figure a:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color);
+  outline-offset: 3px;
+}
+.md-typeset .doc-figure figcaption {
+  max-width: none;
+  margin: .7rem .15rem .15rem;
+  text-align: left;
+  font-size: .72rem;
+  line-height: 1.65;
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset .doc-figure figcaption strong {
+  color: var(--md-default-fg-color);
+}
+.md-typeset .doc-figure--compact { max-width: 34rem; margin-inline: auto; }
+.md-typeset .doc-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .85rem;
+  margin: 1.3rem 0;
+}
+.md-typeset .doc-gallery .doc-figure { margin: 0; max-width: 100%; }
+.md-typeset .doc-gallery .doc-figure > p {
+  min-height: 10rem;
+  display: flex;
+  align-items: center;
+  background: var(--md-code-bg-color);
+  border-radius: .25rem;
+}
+.md-typeset .doc-gallery .doc-figure > p > a { width: 100%; }
+.md-typeset .doc-gallery .doc-figure img {
+  max-height: 15rem;
+  object-fit: contain;
+}
+@media (max-width: 42em) {
+  .md-typeset .doc-gallery { grid-template-columns: 1fr; }
+  .md-typeset .doc-figure { padding: .4rem; }
+}

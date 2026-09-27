@@ -102,6 +102,24 @@ BDDL 使用类似 Lisp 的表达式描述任务。建议从项目内置任务开
 
 鼠标与快捷键的具体操作见 [GUI 使用指南](GUI.md)。
 
+<div class="doc-gallery" markdown="1">
+
+<figure class="doc-figure doc-figure--compact" markdown="1">
+
+[![选择要加入的物理物体](images/object-library.png){ loading=lazy width="500" height="400" }](images/object-library.png)
+
+<figcaption markdown="span">**选择要加入的物理物体.** 进入 Free edit，点击 + Add 并选择物体类型。图中选择 kitchen_knife；添加后再通过对象检查器设置摆放位置。</figcaption>
+</figure>
+
+<figure class="doc-figure" markdown="1">
+
+[![检查组合物体的部件](images/articulated-object.png){ loading=lazy width="1440" height="960" }](images/articulated-object.png)
+
+<figcaption markdown="span">**检查组合物体的部件.** 图中选中并打开了柜子的中间抽屉。Alt + 单击用于选择部件，Toggle joint state 控制对应关节。</figcaption>
+</figure>
+
+</div>
+
 <a id="_3"></a>
 
 ## 3. 保持任务与状态一致

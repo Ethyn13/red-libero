@@ -25,6 +25,13 @@ bash gui_start.sh
 bash gui_start.sh /path/to/task.bddl
 ```
 
+<figure class="doc-figure" markdown="1">
+
+[![认识 Scene Studio](images/studio-overview.png){ loading=lazy width="1440" height="960" }](images/studio-overview.png)
+
+<figcaption markdown="span">**认识 Scene Studio.** 左侧选择物体，中间查看主摄像头与腕部摄像头，右侧调整位置、查看安全状态并配置策略。</figcaption>
+</figure>
+
 ## 2. 修改一个物理因素
 
 1. 进入 **Free edit**。
@@ -35,6 +42,13 @@ bash gui_start.sh /path/to/task.bddl
 
 建议从一个能够完成的任务开始，每次只改变一个因素。比较原始场景和风险场景时保持任务目标一致，详见[风险场景](scenarios.md)。
 
+<figure class="doc-figure doc-figure--compact" markdown="1">
+
+[![选择要加入的物理物体](images/object-library.png){ loading=lazy width="500" height="400" }](images/object-library.png)
+
+<figcaption markdown="span">**选择要加入的物理物体.** 进入 Free edit，点击 + Add 并选择物体类型。图中选择 kitchen_knife；添加后再通过对象检查器设置摆放位置。</figcaption>
+</figure>
+
 ## 3. 保存场景
 
 点击 **Save scene**。活动日志会显示启动目录下 `Scene/` 中新建的文件夹。BDDL、状态与元数据需要一起保存。**Open scene** 恢复完整场景包；**Reset** 恢复工作区基准；**Resample** 按 BDDL 重新采样摆放。
@@ -44,6 +58,13 @@ bash gui_start.sh /path/to/task.bddl
 打开 **Safety Monitor → Rules & detections…**。展开规则，选择谓词，点击 **Edit node** 查看对象参数。通过 **Add rule** 和 **Insert child** 添加条件；通过 **Wrap node… → Cumulative samples (cumu)** 添加累计采样阈值。
 
 **Validate** 检查草稿；**Apply** 启用规则并清空检测历史。这里定义的是违规触发条件，因此结果为真时会记录事件。比较事件数量之前，请阅读[规则语义](SAFETY_RULES.md)。
+
+<figure class="doc-figure" markdown="1">
+
+[![用树节点构建规则](images/safety-rule-tree.png){ loading=lazy width="1120" height="760" }](images/safety-rule-tree.png)
+
+<figcaption markdown="span">**用树节点构建规则.** 示例包含累计距离条件、带对象量词的跌落检测和机械臂受力规则。选择节点即可查看其参数。</figcaption>
+</figure>
 
 ## 5. 准备好后运行 VLA
 
@@ -56,3 +77,10 @@ bash gui_start.sh /path/to/task.bddl
 5. 退出 AI 模式前，聚焦摄像头区域并按 **S** 导出本轮数据。
 
 进入 AI policy 不会直接开始机器人动作。连接检查可能向模型发送诊断推理请求，但不会推进 GUI 中的机器人。详见[连接与配置](POLICY_SERVICES.md)。
+
+<figure class="doc-figure" markdown="1">
+
+[![准备好后再开始运行](images/policy-ready.png){ loading=lazy width="1440" height="960" }](images/policy-ready.png)
+
+<figcaption markdown="span">**准备好后再开始运行.** AI policy 已准备就绪，Start run 按钮可用。截图时尚未发起模型推理，也未开始机器人执行。</figcaption>
+</figure>

@@ -18,12 +18,26 @@ Open **Safety Monitor → Rules & detections…** in Scene Studio. The default *
 
 ## 1. Use the rule tree
 
+<figure class="doc-figure" markdown="1">
+
+[![Build a rule as a tree](images/safety-rule-tree.png){ loading=lazy width="1120" height="760" }](images/safety-rule-tree.png)
+
+<figcaption markdown="span">**Build a rule as a tree.** The example combines a cumulative distance condition, a quantified fall check, and an arm-force rule. Select a node to inspect its arguments.</figcaption>
+</figure>
+
 1. Choose **Add rule**, then select **Predicate** or **Operator**. For predicates, select the function and argument signature, then choose scene nouns (objects, fixtures, regions, or bound variables) and enter any numeric threshold. Noun lists support typing to filter; exact names, BDDL types, and selectors can also be entered.
 2. Select a logic node and choose **Insert child**. Unfinished slots appear as **Choose a condition** and prevent Apply. Select a predicate or one of its argument rows and choose **Edit node** to change its nouns or threshold. **Replace** changes the entire selected condition.
 3. To accumulate an existing condition, select it, choose **Cumulative samples (cumu)** in **Wrap selected condition with**, then choose **Wrap node…** and enter **True samples**. Other wrappers include and, or, not, exists, forall, implies, and rising. Wrapping preserves the existing subtree. Complete any additional child slots before applying.
 4. **Remove**, **Move up/down**, **Undo**, and **Redo** operate on tree nodes. Reordering is limited to independent rules and and/or children, so fixed argument order is preserved. Editing an object variable also renames its bound uses.
 5. **Validate** checks syntax, argument types, thresholds, and variable bindings without advancing the simulator. **Apply** activates the configuration and clears the previous monitor history. Finish an AI rollout or leave Human Assist before applying changes.
 6. Run Physics, Human Assist, or AI policy to collect detection samples. Free edit pauses detection. **Live results** shows each rule's state, cumulative progress, matched entities, and diagnostics. **Export events…** saves rules, results, events, and summary counts as JSON.
+
+<figure class="doc-figure doc-figure--compact" markdown="1">
+
+[![Choose a predicate and its nouns](images/safety-predicate.png){ loading=lazy width="620" height="500" }](images/safety-predicate.png)
+
+<figcaption markdown="span">**Choose a predicate and its nouns.** The distance predicate takes a scene object and a threshold in metres. This example checks a 0.05 m gripper distance.</figcaption>
+</figure>
 
 <a id="what-exists-means"></a>
 
@@ -53,9 +67,23 @@ This rule activates when an individual knife has met the blade-contact condition
 
 Applied rules are stored in `.red-libero/safety_rules.bddl` beside the editor workspace, survive scene changes and restarts, and take precedence over `gui_modules/safety_monitoring_config.bddl`. **Open** loads a file for editing; **Save as** exports a reusable configuration. Neither activates it until **Apply**. An invalid configuration is reported rather than silently interpreted as an empty rule set.
 
+<figure class="doc-figure" markdown="1">
+
+[![Browse predicates and scene objects](images/safety-catalog.png){ loading=lazy width="1120" height="760" }](images/safety-catalog.png)
+
+<figcaption markdown="span">**Browse predicates and scene objects.** Use the shared reference to find a predicate signature and the object or region names available in the current scene.</figcaption>
+</figure>
+
 <a id="cumulative-conditions"></a>
 
 ## 4. Cumulative conditions
+
+<figure class="doc-figure doc-figure--compact" markdown="1">
+
+[![Set a cumulative threshold](images/safety-cumulative.png){ loading=lazy width="620" height="500" }](images/safety-cumulative.png)
+
+<figcaption markdown="span">**Set a cumulative threshold.** Three true detection samples activate this example. False samples retain the count; reset clears it.</figcaption>
+</figure>
 
 Load [configs/safety/cumulative.bddl](downloads/configs/safety/cumulative.bddl) for a reusable example of shared counters, per-object counters, and transition counting.
 
@@ -115,6 +143,13 @@ Quantifiers are helpers for object scope. `exists` over an empty domain is false
 <a id="thresholds-and-unavailable-checks"></a>
 
 ## 6. Thresholds and unavailable checks
+
+<figure class="doc-figure" markdown="1">
+
+[![Read the current detection state](images/safety-live-results.png){ loading=lazy width="1120" height="760" }](images/safety-live-results.png)
+
+<figcaption markdown="span">**Read the current detection state.** Live results shows each rule's state, cumulative progress, and diagnostic details. Export events saves the activation history.</figcaption>
+</figure>
 
 | Expression | Units and comparison |
 | --- | --- |

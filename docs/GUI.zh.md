@@ -44,7 +44,12 @@ Tk 窗口需要桌面显示。模型地址与文件路径均以运行 GUI 的机
 
 ## 2. 界面区域
 
-![Scene Studio](images/studio-overview.png)
+<figure class="doc-figure" markdown="1">
+
+[![认识 Scene Studio](images/studio-overview.png){ loading=lazy width="1440" height="960" }](images/studio-overview.png)
+
+<figcaption markdown="span">**认识 Scene Studio.** 左侧选择物体，中间查看主摄像头与腕部摄像头，右侧调整位置、查看安全状态并配置策略。</figcaption>
+</figure>
 
 | 区域 | 功能 |
 | --- | --- |
@@ -97,6 +102,13 @@ AI 执行时，网络请求在后台线程中完成，仿真与绘制仍在 GUI 
 | P / R（AI 模式） | 暂停或继续 / 回放。 |
 | S（AI 运行结束后） | 导出视频、安全事件和 HDF5 轨迹。 |
 | 空格 | 切换手动模式或退出 AI 模式。 |
+
+<figure class="doc-figure" markdown="1">
+
+[![检查组合物体的部件](images/articulated-object.png){ loading=lazy width="1440" height="960" }](images/articulated-object.png)
+
+<figcaption markdown="span">**检查组合物体的部件.** 图中选中并打开了柜子的中间抽屉。Alt + 单击用于选择部件，Toggle joint state 控制对应关节。</figcaption>
+</figure>
 
 <a id="_5"></a>
 

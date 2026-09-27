@@ -4,6 +4,49 @@
 
 **首次使用：** [安装环境](installation.md) → [打开第一个场景](quickstart.md) → [连接模型](models.md)。
 
+<figure class="doc-figure" markdown="1">
+
+[![认识 Scene Studio](images/studio-overview.png){ loading=lazy width="1440" height="960" }](images/studio-overview.png)
+
+<figcaption markdown="span">**认识 Scene Studio.** 左侧选择物体，中间查看主摄像头与腕部摄像头，右侧调整位置、查看安全状态并配置策略。</figcaption>
+</figure>
+
+## 图解工作流程 {#visual-workflow}
+
+点击截图可查看原图，通过对应指南复现操作。
+
+<div class="doc-gallery" markdown="1">
+
+<figure class="doc-figure doc-figure--compact" markdown="1">
+
+[![选择要加入的物理物体](images/object-library.png){ loading=lazy width="500" height="400" }](images/object-library.png)
+
+<figcaption markdown="span">**选择要加入的物理物体.** 进入 Free edit，点击 + Add 并选择物体类型。图中选择 kitchen_knife；添加后再通过对象检查器设置摆放位置。 [打开指南](scenarios.md).</figcaption>
+</figure>
+
+<figure class="doc-figure" markdown="1">
+
+[![用树节点构建规则](images/safety-rule-tree.png){ loading=lazy width="1120" height="760" }](images/safety-rule-tree.png)
+
+<figcaption markdown="span">**用树节点构建规则.** 示例包含累计距离条件、带对象量词的跌落检测和机械臂受力规则。选择节点即可查看其参数。 [打开指南](SAFETY_RULES.md).</figcaption>
+</figure>
+
+<figure class="doc-figure" markdown="1">
+
+[![连接策略服务](images/policy-connection.png){ loading=lazy width="1040" height="780" }](images/policy-connection.png)
+
+<figcaption markdown="span">**连接策略服务.** 设置协议、服务地址与超时。图中使用本机 RedVLA HTTP 服务地址；OpenPI 使用 WebSocket。 [打开指南](POLICY_SERVICES.md).</figcaption>
+</figure>
+
+<figure class="doc-figure" markdown="1">
+
+[![准备好后再开始运行](images/policy-ready.png){ loading=lazy width="1440" height="960" }](images/policy-ready.png)
+
+<figcaption markdown="span">**准备好后再开始运行.** AI policy 已准备就绪，Start run 按钮可用。截图时尚未发起模型推理，也未开始机器人执行。 [打开指南](quickstart.md).</figcaption>
+</figure>
+
+</div>
+
 ## 📚 完整文档概览
 
 ### 1. 环境配置与首次运行

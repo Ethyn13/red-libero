@@ -42,6 +42,35 @@ The GUI imports no model backend from that environment. Do not merge conflicting
 
 ## 2. Configure in Choose model
 
+Follow the tabs in order. The screenshots use an example profile; configure your own service before checking the connection.
+
+=== "Connection"
+
+    <figure class="doc-figure" markdown="1">
+
+    [![Connect a policy service](images/policy-connection.png){ loading=lazy width="1040" height="780" }](images/policy-connection.png)
+
+    <figcaption markdown="span">**Connect a policy service.** Select the protocol, endpoint, and timeout. The example uses RedVLA HTTP at a local endpoint; OpenPI uses WebSocket.</figcaption>
+    </figure>
+
+=== "Launch"
+
+    <figure class="doc-figure" markdown="1">
+
+    [![Bind the model environment](images/policy-launch.png){ loading=lazy width="1040" height="780" }](images/policy-launch.png)
+
+    <figcaption markdown="span">**Bind the model environment.** Choose the model's Python interpreter and working directory, then specify the startup script and arguments. Replace the illustrated /path/to paths with your own.</figcaption>
+    </figure>
+
+=== "Run"
+
+    <figure class="doc-figure" markdown="1">
+
+    [![Set the episode budget](images/policy-run-settings.png){ loading=lazy width="1040" height="780" }](images/policy-run-settings.png)
+
+    <figcaption markdown="span">**Set the episode budget.** Configure maximum steps, settling steps, and the inference seed. Settling steps count toward the total budget.</figcaption>
+    </figure>
+
 1. Open **Choose model** and select a template from `configs/policies/` or **Import YAML**.
 2. In **Connection**, set the protocol, endpoint, and client timeout options. Use HTTP for a RedVLA server and WebSocket for an OpenPI server.
 3. In **Launch**, choose the Python executable inside the model's Conda environment, its repository working directory, and launch arguments. Each line is one argument; `{python}` expands to the selected interpreter. **Choose startup script** accepts a Python script, shell script, or executable. Add its arguments on subsequent lines. Set `CUDA_VISIBLE_DEVICES` in the environment JSON.
@@ -117,3 +146,10 @@ Only network operations run in the worker thread. Simulation, safety checks, obs
 Execution stops on BDDL success, environment termination, the step budget, or an error. Settling steps count toward the budget. `seed` is passed as inference context to HTTP backends; honoring it is backend-specific, and standard OpenPI does not accept it on the wire. It does not reseed or resample the edited scene. GUI runs are interactive inspections, not replacements for RedVLA's benchmark evaluation and full reproducibility metadata.
 
 An absent profile or failed connection never produces placeholder actions. HTTP episode leases prevent two clients from sharing one active model episode. Use a separate service per concurrent evaluator. For standard OpenPI, dedicate a service to this GUI while running an episode.
+
+<figure class="doc-figure" markdown="1">
+
+[![Start only when ready](images/policy-ready.png){ loading=lazy width="1440" height="960" }](images/policy-ready.png)
+
+<figcaption markdown="span">**Start only when ready.** AI policy is prepared, with Start run enabled. No model inference or robot execution has started in this screenshot.</figcaption>
+</figure>

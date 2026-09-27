@@ -44,7 +44,12 @@ OSMesa and EGL render simulation images; the Tk window still needs a desktop dis
 
 ## 2. Workspace
 
-![Scene Studio](images/studio-overview.png)
+<figure class="doc-figure" markdown="1">
+
+[![Scene Studio at a glance](images/studio-overview.png){ loading=lazy width="1440" height="960" }](images/studio-overview.png)
+
+<figcaption markdown="span">**Scene Studio at a glance.** Select an object on the left, inspect both camera views, and edit its position or prepare a policy on the right.</figcaption>
+</figure>
 
 | Area | Controls |
 | --- | --- |
@@ -97,6 +102,13 @@ Focus the camera area before using scene shortcuts. Typing in the instruction, f
 | P / R, in AI mode | Pause or resume / replay. |
 | S, after an AI episode | Export videos, safety events, and HDF5 trajectory. |
 | Space | Cycle manual modes or leave AI mode. |
+
+<figure class="doc-figure" markdown="1">
+
+[![Inspect an articulated part](images/articulated-object.png){ loading=lazy width="1440" height="960" }](images/articulated-object.png)
+
+<figcaption markdown="span">**Inspect an articulated part.** The middle cabinet drawer is selected and open. Alt + click selects the part; Toggle joint state changes that joint.</figcaption>
+</figure>
 
 <a id="save-and-restore-scenes"></a>
 

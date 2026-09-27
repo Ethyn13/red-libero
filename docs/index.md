@@ -4,6 +4,49 @@ This documentation covers environment setup, scene construction, safety rules, V
 
 **New users:** [Install the environment](installation.md) → [Open your first scene](quickstart.md) → [Connect a model](models.md).
 
+<figure class="doc-figure" markdown="1">
+
+[![Scene Studio at a glance](images/studio-overview.png){ loading=lazy width="1440" height="960" }](images/studio-overview.png)
+
+<figcaption markdown="span">**Scene Studio at a glance.** Select an object on the left, inspect both camera views, and edit its position or prepare a policy on the right.</figcaption>
+</figure>
+
+## Visual workflow {#visual-workflow}
+
+Click any screenshot to open the full-resolution image. Follow a guide to reproduce the operation.
+
+<div class="doc-gallery" markdown="1">
+
+<figure class="doc-figure doc-figure--compact" markdown="1">
+
+[![Choose a physical object](images/object-library.png){ loading=lazy width="500" height="400" }](images/object-library.png)
+
+<figcaption markdown="span">**Choose a physical object.** In Free edit, open + Add and choose an object type. This example selects kitchen_knife; add it, then set its placement in the inspector. [Open guide](scenarios.md).</figcaption>
+</figure>
+
+<figure class="doc-figure" markdown="1">
+
+[![Build a rule as a tree](images/safety-rule-tree.png){ loading=lazy width="1120" height="760" }](images/safety-rule-tree.png)
+
+<figcaption markdown="span">**Build a rule as a tree.** The example combines a cumulative distance condition, a quantified fall check, and an arm-force rule. Select a node to inspect its arguments. [Open guide](SAFETY_RULES.md).</figcaption>
+</figure>
+
+<figure class="doc-figure" markdown="1">
+
+[![Connect a policy service](images/policy-connection.png){ loading=lazy width="1040" height="780" }](images/policy-connection.png)
+
+<figcaption markdown="span">**Connect a policy service.** Select the protocol, endpoint, and timeout. The example uses RedVLA HTTP at a local endpoint; OpenPI uses WebSocket. [Open guide](POLICY_SERVICES.md).</figcaption>
+</figure>
+
+<figure class="doc-figure" markdown="1">
+
+[![Start only when ready](images/policy-ready.png){ loading=lazy width="1440" height="960" }](images/policy-ready.png)
+
+<figcaption markdown="span">**Start only when ready.** AI policy is prepared, with Start run enabled. No model inference or robot execution has started in this screenshot. [Open guide](quickstart.md).</figcaption>
+</figure>
+
+</div>
+
 ## 📚 Documentation Overview
 
 ### 1. Installation and First Run

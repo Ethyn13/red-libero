@@ -20,6 +20,13 @@
 
 ## 1. 使用规则树
 
+<figure class="doc-figure" markdown="1">
+
+[![用树节点构建规则](images/safety-rule-tree.png){ loading=lazy width="1120" height="760" }](images/safety-rule-tree.png)
+
+<figcaption markdown="span">**用树节点构建规则.** 示例包含累计距离条件、带对象量词的跌落检测和机械臂受力规则。选择节点即可查看其参数。</figcaption>
+</figure>
+
 1. 点击 **Add rule**，选择 **Predicate** 或 **Operator**。谓词需要先选择函数及参数形式，再选择场景物体、固定设施、区域或绑定变量，并填写必要的数值阈值。
 2. 选中逻辑节点，点击 **Insert child**。未完成的位置显示为 **Choose a condition**，并阻止 Apply。选择谓词或参数行，点击 **Edit node** 修改参数；**Replace** 替换整个条件。
 3. 对已有条件进行累计检测时，在 **Wrap selected condition with** 中选择 **Cumulative samples (cumu)**，点击 **Wrap node…**，填写 **True samples**。其他外层运算包括 and、or、not、exists、forall、implies 和 rising。
@@ -28,6 +35,13 @@
 6. Physics、Human Assist 和 AI policy 收集检测采样，Free edit 暂停检测。**Live results** 显示结果、累计进度、命中对象及诊断，**Export events…** 导出 JSON。
 
 对象下拉框支持输入筛选，也接受精确名称、BDDL 类型和选择器。这里的规则是**违规触发条件**：表达式为真时，指定事件处于活动状态。
+
+<figure class="doc-figure doc-figure--compact" markdown="1">
+
+[![选择谓词与对象参数](images/safety-predicate.png){ loading=lazy width="620" height="500" }](images/safety-predicate.png)
+
+<figcaption markdown="span">**选择谓词与对象参数.** 距离谓词需要场景对象和以米为单位的阈值。图中以 0.05 m 为阈值检查夹爪与物体的距离。</figcaption>
+</figure>
 
 <a id="exists"></a>
 
@@ -64,9 +78,23 @@ Any matching object (exists)     ?knife in @objects:*knife*
 
 Apply 后，规则保存到启动目录的 `.red-libero/safety_rules.bddl`，切换场景或重启后仍然有效。没有该文件时使用 `gui_modules/safety_monitoring_config.bddl`。**Open** 只载入编辑草稿，**Save as** 只导出配置，二者都需要 Apply 才生效。
 
+<figure class="doc-figure" markdown="1">
+
+[![查找谓词与场景对象](images/safety-catalog.png){ loading=lazy width="1120" height="760" }](images/safety-catalog.png)
+
+<figcaption markdown="span">**查找谓词与场景对象.** 在同一页面查询谓词的参数签名，以及当前场景中可用的物体和区域名称。</figcaption>
+</figure>
+
 <a id="cumu"></a>
 
 ## 4. cumu 的累计语义
+
+<figure class="doc-figure doc-figure--compact" markdown="1">
+
+[![设置累计采样阈值](images/safety-cumulative.png){ loading=lazy width="620" height="500" }](images/safety-cumulative.png)
+
+<figcaption markdown="span">**设置累计采样阈值.** 图中条件在三个检测样本为真后触发。假值样本保留已有计数，重置会清空计数。</figcaption>
+</figure>
 
 下载[累计条件样例](downloads/configs/safety/cumulative.bddl)。
 
@@ -136,6 +164,13 @@ Physics 每次真实仿真更新后检查一次，目前一次更新包含十个
 <a id="_7"></a>
 
 ## 6. 数值阈值与不可用检测
+
+<figure class="doc-figure" markdown="1">
+
+[![读取实时检测结果](images/safety-live-results.png){ loading=lazy width="1120" height="760" }](images/safety-live-results.png)
+
+<figcaption markdown="span">**读取实时检测结果.** Live results 显示各规则的状态、累计进度和诊断详情。Export events 用于导出激活事件记录。</figcaption>
+</figure>
 
 | 表达式 | 单位与比较 |
 | --- | --- |

@@ -29,7 +29,6 @@ The desktop interface uses **Tkinter / ttk**, with a **Matplotlib TkAgg** canvas
 ## Contents
 
 - [Features](#features)
-- [Documentation](#documentation)
 - [Installation](#installation)
 - [Quick start](#quick-start)
 - [Connect a VLA model](#connect-a-vla-model)
@@ -57,22 +56,6 @@ The desktop interface uses **Tkinter / ttk**, with a **Matplotlib TkAgg** canvas
 | Export | Save BDDL/state/metadata bundles, dual-camera videos, and HDF5 policy trajectories. |
 
 **Entering AI policy does not move the robot.** Execution begins only after **Start run**. The controls also support Pause / resume and Replay. Red LIBERO runs the scene open in the editor; use the companion [RedVLA project](https://redvla.github.io) for batch evaluation and automated placement search.
-
-## Documentation
-
-Read the hosted documentation: **[English](https://ethyn13.github.io/red-libero/)** · **[简体中文](https://ethyn13.github.io/red-libero/zh/)**. GitHub Pages publishes updates automatically after documentation changes reach the main branch and pass the build and link checks.
-
-The bilingual documentation starts with a complete guide directory. Each guide uses a table of contents, numbered sections, commands, parameter tables, and notes. The website adds top navigation, section sidebars, search, a language switch, and copyable examples. It covers installation, scene construction, safety rules and cumulative conditions, model services, recording, and development.
-
-To preview or edit the documentation locally, use a separate Conda environment from the repository root:
-
-```bash
-conda env create -f environment-docs.yml
-conda activate red-libero-docs
-python -m mkdocs serve -a 127.0.0.1:8765
-```
-
-Open `http://127.0.0.1:8765/` for English or `http://127.0.0.1:8765/zh/` for Chinese. See [documentation maintenance](docs/documentation.md) for strict builds, link checks, remote previews, and static hosting. The Markdown source remains available in `docs/`.
 
 ## Installation
 
