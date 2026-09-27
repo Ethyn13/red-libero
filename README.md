@@ -13,9 +13,9 @@
 <p align="center">
   <a href="https://redvla.github.io/"><img src="https://img.shields.io/badge/Website-redvla.github.io-1677c8.svg" alt="Project website"></a>
   <a href="https://arxiv.org/abs/2604.22591"><img src="https://img.shields.io/badge/arXiv-2604.22591-b31b1b.svg" alt="Paper: arXiv 2604.22591"></a>
-  <a href="docs/index.md"><img src="https://img.shields.io/badge/Docs-English-1677c8.svg" alt="Documentation"></a>
-  <a href="docs/index.zh.md"><img src="https://img.shields.io/badge/Docs-%E4%B8%AD%E6%96%87-1677c8.svg" alt="中文文档"></a>
-  <a href="docs/POLICY_SERVICES.md"><img src="https://img.shields.io/badge/VLA-Integration-0E766E.svg" alt="VLA integration"></a>
+  <a href="https://ethyn13.github.io/red-libero/"><img src="https://img.shields.io/badge/Docs-English-1677c8.svg" alt="Documentation"></a>
+  <a href="https://ethyn13.github.io/red-libero/zh/"><img src="https://img.shields.io/badge/Docs-%E4%B8%AD%E6%96%87-1677c8.svg" alt="中文文档"></a>
+  <a href="https://ethyn13.github.io/red-libero/POLICY_SERVICES/"><img src="https://img.shields.io/badge/VLA-Integration-0E766E.svg" alt="VLA integration"></a>
   <a href="#citation"><img src="https://img.shields.io/badge/Citation-BibTeX-4051b5.svg" alt="Citation"></a>
   <a href="#license"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
 </p>
@@ -60,9 +60,11 @@ The desktop interface uses **Tkinter / ttk**, with a **Matplotlib TkAgg** canvas
 
 ## Documentation
 
+Read the hosted documentation: **[English](https://ethyn13.github.io/red-libero/)** · **[简体中文](https://ethyn13.github.io/red-libero/zh/)**. GitHub Pages publishes updates automatically after documentation changes reach the main branch and pass the build and link checks.
+
 The bilingual documentation starts with a complete guide directory. Each guide uses a table of contents, numbered sections, commands, parameter tables, and notes. The website adds top navigation, section sidebars, search, a language switch, and copyable examples. It covers installation, scene construction, safety rules and cumulative conditions, model services, recording, and development.
 
-Build it in a separate Conda environment from the repository root:
+To preview or edit the documentation locally, use a separate Conda environment from the repository root:
 
 ```bash
 conda env create -f environment-docs.yml

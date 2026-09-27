@@ -9,7 +9,7 @@ The site uses [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) an
 3. [Build and check](#build-and-check)
 4. [Write a bilingual page](#write-a-bilingual-page)
 5. [Keep reference data current](#keep-reference-data-current)
-6. [Publish the static output](#publish-the-static-output)
+6. [Publish with GitHub Pages](#publish-the-static-output)
 
 ---
 
@@ -45,7 +45,7 @@ python -m mkdocs build --strict
 python scripts/check_docs.py
 ```
 
-The static site is written to `site/`, which is ignored by Git. The checker verifies translation pairs and internal HTML links / anchors. The docs workflow runs the same build and checks, then uploads the static site as a build artifact. It does not publish it automatically.
+The static site is written to `site/`, which is ignored by Git. The checker verifies translation pairs and internal HTML links / anchors. The docs workflow runs the same build and checks, then uploads the static site as a build artifact. Successful builds on the main branch deploy to GitHub Pages automatically.
 
 <a id="write-a-bilingual-page"></a>
 
@@ -77,16 +77,22 @@ The style, icon, fonts, and search assets are bundled locally. The site does not
 
 <a id="publish-the-static-output"></a>
 
-## 6. Publish the static output
+## 6. Publish with GitHub Pages
 
-Before a public build, set `DOCS_SITE_URL` to the final URL, including any path prefix and trailing slash:
+The official documentation is hosted at [English](https://ethyn13.github.io/red-libero/) and [简体中文](https://ethyn13.github.io/red-libero/zh/).
+
+The [Documentation workflow](https://github.com/Ethyn13/red-libero/actions/workflows/docs.yml) builds and checks the site on pull requests and on relevant changes pushed to the main branch. Pull requests only validate the site. Successful builds on the main branch deploy to GitHub Pages automatically. You can also select **Run workflow** on the main branch to publish manually.
+
+The repository uses **Settings → Pages → Build and deployment → Source: GitHub Actions**. The workflow uploads only the generated documentation site and deploys it through the github-pages environment. GitHub provides the deployment token; no personal access token is stored in the workflow.
+
+To reproduce the published build locally:
 
 ```bash
-export DOCS_SITE_URL=https://your-organization.github.io/your-repository/
+export DOCS_SITE_URL=https://ethyn13.github.io/red-libero/
 python -m mkdocs build --strict
 python scripts/check_docs.py
 ```
 
-Upload the contents of `site/` to the selected static host, or use your repository's GitHub Pages deployment process. Serve the files over HTTP(S), preserving directory URLs and the `zh/` subtree. Do not open `index.html` directly with a `file://` URL when checking search.
+The workflow sets the same site URL for both the build and link checks, including the /red-libero/ prefix. Local previews continue to use the localhost default when DOCS_SITE_URL is unset.
 
-The default site URL is a local preview address. Setting a URL in the build configuration does not publish the site or configure a domain. [redvla.github.io](https://redvla.github.io) is the project website; choose the documentation's deployment destination separately.
+For a fork or another hosting destination, update DOCS_SITE_URL in the workflow and enable GitHub Pages in that repository. [redvla.github.io](https://redvla.github.io) remains the RedVLA project website.

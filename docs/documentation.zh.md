@@ -9,7 +9,7 @@
 3. [构建与检查](#_4)
 4. [添加双语页面](#_5)
 5. [避免参考内容过期](#_6)
-6. [发布静态站点](#_7)
+6. [使用 GitHub Pages 发布](#_7)
 
 ---
 
@@ -45,7 +45,7 @@ python -m mkdocs build --strict
 python scripts/check_docs.py
 ```
 
-静态页面输出到 `site/`，该目录被 Git 忽略。检查脚本校验双语页面配对及内部 HTML 链接和锚点。文档工作流执行相同的构建与检查，然后上传网页构建产物，不会自动对外发布。
+静态页面输出到 `site/`，该目录被 Git 忽略。检查脚本校验双语页面配对及内部 HTML 链接和锚点。文档工作流执行相同的构建与检查，然后上传网页构建产物；主分支通过检查后自动部署到 GitHub Pages。
 
 <a id="_5"></a>
 
@@ -77,16 +77,22 @@ docs/
 
 <a id="_7"></a>
 
-## 6. 发布静态站点
+## 6. 使用 GitHub Pages 发布
 
-公开构建之前，将 `DOCS_SITE_URL` 设置为最终地址，包含路径前缀和末尾斜杠：
+正式文档地址：[English](https://ethyn13.github.io/red-libero/) · [简体中文](https://ethyn13.github.io/red-libero/zh/)。
+
+[Documentation 工作流](https://github.com/Ethyn13/red-libero/actions/workflows/docs.yml)会在拉取请求以及主分支相关文件更新时构建并检查文档。拉取请求只执行检查；主分支构建成功后自动部署到 GitHub Pages。也可以在主分支上选择 **Run workflow** 手动发布。
+
+仓库采用 **Settings → Pages → Build and deployment → Source: GitHub Actions**。工作流只上传生成的文档站点，通过 github-pages 环境部署。部署令牌由 GitHub 提供，工作流无需保存个人访问令牌。
+
+在本地复现线上构建：
 
 ```bash
-export DOCS_SITE_URL=https://your-organization.github.io/your-repository/
+export DOCS_SITE_URL=https://ethyn13.github.io/red-libero/
 python -m mkdocs build --strict
 python scripts/check_docs.py
 ```
 
-将 `site/` 内容部署到静态托管平台，或使用仓库的 GitHub Pages 发布流程。通过 HTTP(S) 提供服务，保留目录 URL 和 `zh/` 子目录。检查搜索时不要直接以 `file://` 打开 `index.html`。
+工作流为构建和链接检查设置相同的站点地址，包含 /red-libero/ 路径前缀。未设置 DOCS_SITE_URL 时，本地预览继续使用默认的 localhost 地址。
 
-默认地址仅用于本地预览。填写站点 URL 不代表已经发布网站，也不会配置域名。[redvla.github.io](https://redvla.github.io) 是项目主页，文档站的最终部署位置需单独选择。
+如果使用 fork 仓库或其他托管地址，请修改工作流中的 DOCS_SITE_URL，并在对应仓库启用 GitHub Pages。[redvla.github.io](https://redvla.github.io)继续作为 RedVLA 项目主页。
