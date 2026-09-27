@@ -2,7 +2,13 @@
 
 ## Project code
 
-red-libero is the scene editing and simulation workspace for RedVLA. Its source code is distributed under the MIT License in [LICENSE](LICENSE). Preserve applicable copyright and license notices when redistributing source or binaries.
+red-libero is the scene editing and simulation workspace for RedVLA. Its source code is distributed under the MIT License in [LICENSE](LICENSE).
+
+Original additions and modifications developed for red-libero are covered by:
+
+> Copyright (c) 2026 red-libero contributors
+
+This notice applies to the red-libero contributions and does not replace the copyright notices for upstream code or third-party materials. Preserve applicable copyright and license notices when redistributing source or binaries.
 
 ## LIBERO-derived code
 

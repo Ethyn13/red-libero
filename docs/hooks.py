@@ -9,7 +9,7 @@ from mkdocs.structure.files import File
 def on_files(files, config):
     root = Path(config.config_file_path).parent
     sources = ["environment.yml", "environment-docs.yml", "requirements/studio.txt",
-               "requirements/docs.txt", "LICENSE", "NOTICE.md", "CITATION.cff", "configs/safety/cumulative.bddl"]
+               "requirements/docs.txt", "LICENSE", "NOTICE.md", "configs/safety/cumulative.bddl"]
     sources.extend(f"configs/policies/{name}.yaml" for name in ("openvla", "vla-adapter", "pi0", "custom-script"))
     for source in sources:
         destination = "downloads/" + source

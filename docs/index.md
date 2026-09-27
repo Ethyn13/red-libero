@@ -137,4 +137,4 @@ Every English guide has a matching `.zh.md` file. The language menu switches to 
 
 ## Project and License
 
-red-libero is the scene workspace for [RedVLA](https://redvla.github.io). The [MIT license](downloads/LICENSE) retains the upstream LIBERO notices. Model code, checkpoints, and third-party assets follow their respective licenses. See the [third-party notices](downloads/NOTICE.txt) for scope and attribution, and [CITATION.cff](downloads/CITATION.cff) to cite the accompanying RedVLA paper. Contributions are described in the [contribution guide](contributing.md).
+red-libero is the scene workspace for [RedVLA](https://redvla.github.io). The [MIT license](downloads/LICENSE) includes the copyright notice for red-libero contributors' original additions and modifications, and retains the upstream LIBERO notice. Model code, checkpoints, and third-party assets follow their respective licenses. See the [third-party notices](downloads/NOTICE.txt) for scope and attribution, and the [README citation section](https://github.com/Ethyn13/red-libero#citation) for the RedVLA paper's BibTeX entry. Contributions are described in the [contribution guide](contributing.md).

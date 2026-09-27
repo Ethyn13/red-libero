@@ -416,11 +416,9 @@ If you use red-libero to construct risk scenarios, run VLA policies, or evaluate
 }
 ```
 
-Machine-readable citation metadata is available in [CITATION.cff](CITATION.cff).
-
 ## License
 
-The source code is released under the **[MIT License](LICENSE)**. The full license text and retained upstream copyright notice are provided in `LICENSE`.
+The source code is released under the **[MIT License](LICENSE)**. Original additions and modifications developed for red-libero are copyright (c) 2026 red-libero contributors. The same license file retains the copyright (c) 2023 Lifelong Robot Learning notice for code derived from LIBERO.
 
 Code derived from LIBERO retains its upstream attribution. Third-party assets, dependencies, external model implementations, and checkpoints remain subject to their respective licenses; the repository's MIT license does not replace those terms. See [third-party notices](NOTICE.md) for the attribution and licensing scope.
 
